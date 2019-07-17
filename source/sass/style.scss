@@ -29,7 +29,8 @@ body {
   background-color: #ffffff;
 }
 .visually-hidden:not(:focus):not(:active),
-input[type='checkbox'].visually-hidden {
+input[type='checkbox'].visually-hidden,
+input[type='radio'].visually-hidden {
   position: absolute;
   overflow: hidden;
   clip: rect(0 0 0 0);
@@ -49,6 +50,7 @@ input[type='checkbox'].visually-hidden {
 @import 'blocks/promo.scss';
 @import 'blocks/program.scss';
 @import 'blocks/working.scss';
+@import 'blocks/range.scss';
 @import 'blocks/stats.scss';
 @import 'blocks/catalog.scss';
 @import 'blocks/products.scss';
@@ -61,6 +63,7 @@ input[type='checkbox'].visually-hidden {
 @import 'blocks/pet-char.scss';
 @import 'blocks/options.scss';
 @import 'blocks/comment.scss';
+@import 'blocks/social.scss';
 @import 'blocks/user-contacts.scss';
 @import 'blocks/contacts.scss';
 @import 'blocks/developer.scss';

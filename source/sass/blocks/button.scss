@@ -1,3 +1,4 @@
+@import '../vars.scss';
 .button {
   display: block;
   padding: 10px;
@@ -9,4 +10,12 @@
   text-align: center;
   text-decoration: none;
   border: none;
+  &--accent {
+    color: $white;
+    background-color: $accent;
+  }
+  &--inverse {
+    color: $dark-text;
+    background-color: $light-bg;
+  }
 }

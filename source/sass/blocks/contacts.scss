@@ -1,0 +1,17 @@
+@import '../vars.scss';
+.contacts {
+  &--inverse {
+    background-color: $light-bg;
+  }
+}
+.contacts__lead-text {
+  color: $dark-text;
+  font-family: $Font;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+.contacts__adress {
+  margin: 0;
+}
