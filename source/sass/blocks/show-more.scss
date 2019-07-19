@@ -1,0 +1,18 @@
+@import "../vars.scss";
+
+.show-more__text-top {
+  margin: 0;
+  color: $dark-text;
+  font-family: $Font;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.show-more__text-bottom {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}

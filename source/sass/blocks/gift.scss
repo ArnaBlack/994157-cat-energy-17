@@ -1,0 +1,12 @@
+@import "../vars.scss";
+
+.gift {
+  background-color: $accent;
+}
+
+.gift__lead-text {
+  color: $white;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}

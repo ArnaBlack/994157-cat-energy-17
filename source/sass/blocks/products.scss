@@ -1,0 +1,22 @@
+@import "../vars.scss";
+
+.products {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.products__desc {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.products__caption {
+  font-family: $Font;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $dark-text;
+}

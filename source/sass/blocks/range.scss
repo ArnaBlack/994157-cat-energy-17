@@ -1,0 +1,11 @@
+@import "../vars.scss";
+
+.range__text {
+  margin: 0;
+  color: $dark-text;
+  font-family: $Font;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
+}

@@ -1,0 +1,11 @@
+@import "../vars.scss";
+
+.selection__description {
+  margin: 0;
+  color: $dark-text;
+  font-family: $Font;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+}

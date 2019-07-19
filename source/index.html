@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <link href="css/normalize.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="page-header">
@@ -14,15 +16,15 @@
         <button class="main-nav__toggle" type="button">Открыть меню</button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--active"><a>Главная</a></li>
-            <li class="site-list__item"><a href="catalog.html">Каталог продукции</a></li>
-            <li class="site-list__item"><a href="form.html">Подбор программы</a></li>
+            <li class="site-list__item site-list__item--active"><a class="site-list__link">Главная</a></li>
+            <li class="site-list__item"><a class="site-list__link" href="catalog.html">Каталог продукции</a></li>
+            <li class="site-list__item"><a class="site-list__link" href="form.html">Подбор программы</a></li>
           </ul>
         </div>
       </nav>
     </header>
     <main class="page-main">
-      <h1 class="vissually-hidden">Интернет-магазин функционального питания для котов</h1>
+      <h1 class="visually-hidden">Интернет-магазин функционального питания для котов</h1>
       <section class="promo">
         <h2 class="promo__title title title--inverse">Функциональное питание для котов</h2>
         <b class="promo__lead-text">Занялся собой? Займись котом!</b>
@@ -30,7 +32,7 @@
         <img  class="promo__img" src="http://placehold.it/150x100" alt="фото продукта" width="280" height="270">
       </section>
       <section class="program">
-        <h2 class="vissually-hidden">Программы</h2>
+        <h2 class="visually-hidden">Программы</h2>
         <ul class="program__list">
           <li class="program__item">
             <h3 class="program__title">Похудение</h3>
@@ -46,7 +48,7 @@
         </ul>
       </section>
       <section class="working">
-        <h2 class="working__title title">Как это работает</h2>
+        <h2 class="working__title title title--main">Как это работает</h2>
         <ul class="working__list">
           <li class="working__item">Функциональное питание содержит только полезные питательные вещества.</li>
           <li class="working__item">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</li>
@@ -57,7 +59,7 @@
       <section class="stats">
         <div class="stats__block stats__block--left">
           <header>
-            <h2 class="stats__title title">Живой пример</h2>
+            <h2 class="stats__title title title--main">Живой пример</h2>
             <p class="stats__desc">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
           </header>
           <table class="stats__list">
@@ -79,15 +81,17 @@
             <img class="preview__img preview__img--before" src="#" alt="фото кота до" width="" height="">
             <img class="preview__img preview__img--after" src="#" alt="фото кота после" width="" height="">
             <fieldset class="priview__group range">
-                <label  class="vissually-hidden" for="range-input">Изменить изображение</label>
+                <p class="range__text range__text--before">Было</p>
+                <label  class="visually-hidden" for="range-input">Изменить изображение</label>
                 <input class="range__input" id="range-input" type="range">
                 <button class="range__button" type="button" aria-label="кнопка изменения изображения"></button>
+                <p class="range__text range__text--after">Стало</p>
             </fieldset>
           </div>
         </div>
       </section>
       <section class="contacts contacts--main">
-        <h2 class="vissually-hidden">Контакты</h2>
+        <h2 class="visually-hidden">Контакты</h2>
         <b class="contacts__lead-text">приглашаем к сотрудничеству дилеров!</b>
         <p class="contacts__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
         <div class="contacts__map"></div>
@@ -95,9 +99,9 @@
       <footer class="page-footer">
         <img class="page-footer__logo" src="#" alt="логотип кэтЭнерджи" width="128" height="34">
         <ul class="page-footer__social social">
-          <li class="social__item social__item--vk"></li>
-          <li class="social__item social__item--instagram"></li>
-          <li class="social__item social__item--facebook"></li>
+          <li class="social__item social__item--vk"><span class="visually-hidden">Вконтакте</span></li>
+          <li class="social__item social__item--instagram"><span class="visually-hidden">Инстаграмм</span></li>
+          <li class="social__item social__item--facebook"><span class="visually-hidden">Фейсбук</span></li>
         </ul>
         <div class="page-footer__developer developer">
           <p class="developer__text">HTML Academy</p>

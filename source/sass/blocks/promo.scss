@@ -1,0 +1,17 @@
+@import "../vars.scss";
+
+.promo {
+  background-image: url("../img/index-background-mobile@1x.jpg");
+  background-color: rgba($accent, 70%);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.promo__lead-text {
+  font-family: $Font;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: $white;
+}
