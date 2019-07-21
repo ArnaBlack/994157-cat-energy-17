@@ -1,1 +1,17 @@
 @import "../vars.scss";
+
+.main-nav {
+  width: 320px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: $tablet-width) {
+  .main-nav {
+    width: auto;
+    margin: 0;
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+}

@@ -2,6 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>HTML Academy: Кэт энерджи</title>
     <link href="css/normalize.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
@@ -9,27 +10,28 @@
   <body>
     <header class="page-header">
       <div class="page-header__wrap">
-        <img class="page-header__logo-img" src="http://placehold.it/150x100" width="33" height="38" alt="логотип Кэт энерджи">
-        <img class="page-header__logo-text" src="http://placehold.it/150x100" width="101" height="18" alt="логотип Кэт энерджи">
+        <img class="page-header__logo-img" src="img/logo-mobile.svg" width="191" height="38" alt="логотип Кэт энерджи">
       </div>
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <div class="main-nav__wrapper">
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <!-- <div class="main-nav__wrapper"> -->
           <ul class="main-nav__list site-list">
             <li class="site-list__item site-list__item--active"><a class="site-list__link">Главная</a></li>
             <li class="site-list__item"><a class="site-list__link" href="catalog.html">Каталог продукции</a></li>
             <li class="site-list__item"><a class="site-list__link" href="form.html">Подбор программы</a></li>
           </ul>
-        </div>
+        <!-- </div> -->
       </nav>
     </header>
     <main class="page-main">
       <h1 class="visually-hidden">Интернет-магазин функционального питания для котов</h1>
       <section class="promo">
-        <h2 class="promo__title title title--inverse">Функциональное питание для котов</h2>
-        <b class="promo__lead-text">Занялся собой? Займись котом!</b>
-        <a class="button promo__button button--accent">Подобрать программу</a>
-        <img  class="promo__img" src="http://placehold.it/150x100" alt="фото продукта" width="280" height="270">
+        <div class="promo__wrap">
+          <h2 class="promo__title title title--inverse">Функциональное питание для котов</h2>
+          <b class="promo__lead-text">Занялся собой? Займись котом!</b>
+          <a class="button promo__button button--accent">Подобрать программу</a>
+          <img  class="promo__img" src="img/index-can-mobile@1x.png" alt="фото продукта" width="280" height="270">
+        </div>
       </section>
       <section class="program">
         <h2 class="visually-hidden">Программы</h2>
@@ -58,23 +60,25 @@
       </section>
       <section class="stats">
         <div class="stats__block stats__block--left">
-          <header>
+          <header class="stats__header">
             <h2 class="stats__title title title--main">Живой пример</h2>
-            <p class="stats__desc">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+            <p class="stats__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
           </header>
-          <table class="stats__list">
-            <tr>
-              <td class="stats__cell">
-                <p class="stats__value">5 кг</p>
-                <small class="stats__desc">снижение веса</small>
-              </td>
-              <td class="stats__cell">
-                <p class="stats__value">60 дней</p>
-                <small class="stats__desc">затрачено времени</small>
-              </td>
-            </tr>
-          </table>
-          <p class="stats__total"><span>Затраты на питание:</span><span>15 000 руб.</span></p>
+          <div class="stats__wrap">
+            <table class="stats__list">
+              <tr>
+                <td class="stats__cell">
+                  <p class="stats__value">5 кг</p>
+                  <small class="stats__desc">снижение веса</small>
+                </td>
+                <td class="stats__cell">
+                  <p class="stats__value">60 дней</p>
+                  <small class="stats__desc">затрачено времени</small>
+                </td>
+              </tr>
+            </table>
+            <p class="stats__total"><span>Затраты на питание:</span> <span>15 000 руб.</span></p>
+          </div>
         </div>
         <div class="stats__block stats__block--right preview">
           <div class="preview__wrap">
@@ -92,20 +96,26 @@
       </section>
       <section class="contacts contacts--main">
         <h2 class="visually-hidden">Контакты</h2>
-        <b class="contacts__lead-text">приглашаем к сотрудничеству дилеров!</b>
-        <p class="contacts__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        <div class="contacts__wrap">
+          <b class="contacts__lead-text">приглашаем к сотрудничеству дилеров!</b>
+          <p class="contacts__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        </div>
         <div class="contacts__map"></div>
       </section>
       <footer class="page-footer">
-        <img class="page-footer__logo" src="#" alt="логотип кэтЭнерджи" width="128" height="34">
-        <ul class="page-footer__social social">
-          <li class="social__item social__item--vk"><span class="visually-hidden">Вконтакте</span></li>
-          <li class="social__item social__item--instagram"><span class="visually-hidden">Инстаграмм</span></li>
-          <li class="social__item social__item--facebook"><span class="visually-hidden">Фейсбук</span></li>
-        </ul>
-        <div class="page-footer__developer developer">
-          <p class="developer__text">HTML Academy</p>
-          <img class="developer__logo" src="#" alt="логотип HTML Academy" width="27" height="34">
+        <div class="page-footer__container">
+          <p class="page-footer__wrap">
+            <img class="page-footer__logo" src="img/logo-footer.svg" alt="логотип кэтЭнерджи" width="128" height="34">
+          </p>
+          <ul class="page-footer__social social">
+            <li class="social__item social__item--vk"><span class="visually-hidden">Вконтакте</span></li>
+            <li class="social__item social__item--instagram"><span class="visually-hidden">Инстаграмм</span></li>
+            <li class="social__item social__item--facebook"><span class="visually-hidden">Фейсбук</span></li>
+          </ul>
+          <div class="page-footer__developer developer">
+            <p class="developer__text">HTML Academy</p>
+            <img class="developer__logo" src="img/htmlacademy.svg" alt="логотип HTML Academy" width="27" height="34">
+          </div>
         </div>
       </footer>
     </main>

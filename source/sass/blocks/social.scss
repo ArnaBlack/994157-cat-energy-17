@@ -1,5 +1,8 @@
+@import "../vars.scss";
+
 .social {
   margin: 0;
-  padding: 0;
+  padding: 20px 0;
   list-style: none;
+  border-bottom: 1px solid $border-color;
 }

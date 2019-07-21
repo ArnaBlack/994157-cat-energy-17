@@ -1,7 +1,14 @@
 @import "../vars.scss";
 
 .stats {
+  width: 320px;
+  margin: 0 auto;
+  padding: 30px 20px 39px;
   background-color: $light-bg;
+}
+
+.stats__text {
+  margin: 0;
 }
 
 .stats__value {
@@ -21,10 +28,74 @@
 }
 
 .stats__total {
+  margin: 0;
   color: $dark-text;
   font-family: $Font;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
   text-transform: uppercase;
+}
+
+@media screen and (min-width: $tablet-width)  {
+  .stats {
+    width: 768px;
+    padding: 50px 30px;
+    background-color: $white;
+    border-top: 1px solid $border-color;
+  }
+
+  .stats__wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .stats__list {
+    width: 316px;
+  }
+
+  .stats__value {
+    font-size: 30px;
+    line-height: 37.02px;
+  }
+
+  .stats__desc {
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  .stats__total {
+    width: 174px;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: right;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .stats {
+    width: 1220px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .stats__block {
+    width: 430px;
+
+    &--right {
+      width: 677px;
+    }
+  }
+
+  .stats__wrap {
+    flex-wrap: wrap;
+  }
+
+  .stats__list {
+    width: 100%;
+  }
+
+  .stats__total {
+    width: 100%;
+  }
 }

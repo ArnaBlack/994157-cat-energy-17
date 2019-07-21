@@ -6,6 +6,11 @@
   padding: 0;
 }
 
+.products__item {
+  padding: 25px 20px;
+  border-top: 1px solid $border-color;
+}
+
 .products__desc {
   font-size: 12px;
   font-weight: 400;
@@ -20,3 +25,4 @@
   text-transform: uppercase;
   color: $dark-text;
 }
+

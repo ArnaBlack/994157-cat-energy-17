@@ -1,12 +1,23 @@
 @import "../vars.scss";
 
 .contacts {
+  width: 320px;
+  margin: 0 auto;
+  padding: 30px 20px 25px;
+
   &--inverse {
     background-color: $light-bg;
   }
 }
 
+.contacts__wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
 .contacts__lead-text {
+  width: 123px;
+  display: inline-block;
   color: $dark-text;
   font-family: $Font;
   font-size: 16px;
@@ -16,5 +27,44 @@
 }
 
 .contacts__adress {
+  width: 135px;
   margin: 0;
+}
+
+@media screen and (min-width: $tablet-width) {
+  .contacts {
+    width: 768px;
+    padding: 70px;
+  }
+
+  .contacts__lead-text {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .contacts__adress {
+    width: 160px;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .contacts {
+    width: 100%;
+    padding: 0;
+    position: relative;
+  }
+
+  .contacts__wrap {
+    width: 570px;
+    padding: 69px 90px 59px 76px;
+    position: absolute;
+    left: 140px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .contacts__map {
+    width: 100%;
+    height: 430px;
+  }
 }
