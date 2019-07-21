@@ -169,39 +169,41 @@
       </section>
       <section class="additional-products">
         <h2 class="additional-products__title title title--small">Дополнительные товары</h2>
-        <table class="additional-products__list add-products">
-          <tr class="add-products__item">
-            <td class="add-products__title">Сахарозаменитель</td>
-            <td class="add-products__count">1 упаковка (100 г)</td>
-            <td class="add-products__price">200 Р.</td>
-            <td class="add-products__link"><a class="add-products__button button button--accent" href="#">Заказать</a></td>
-          </tr>
-          <tr class="add-products__item">
-            <td class="add-products__title">Питьевая вода</td>
-            <td class="add-products__count">5 литров</td>
-            <td class="add-products__price">50 Р.</td>
-            <td class="add-products__link"><a class="add-products__button button button--accent" href="#">Заказать</a></td>
-          </tr>
-          <tr class="add-products__item">
-            <td class="add-products__title">Молоко</td>
-            <td class="add-products__count">1 литр</td>
-            <td class="add-products__price">100 Р.</td>
-            <td class="add-products__link"><a class="add-products__button button button--accent" href="#">Заказать</a></td>
-          </tr>
-          <tr class="add-products__item">
-            <td class="add-products__title">Витамины</td>
-            <td class="add-products__count">1 упаковка (30 г)</td>
-            <td class="add-products__price">300 Р.</td>
-            <td class="add-products__link"><a class="add-products__button button button--accent" href="#">Заказать</a></td>
-          </tr>
-        </table>
-        <article class="additional-products__gift gift">
-          <h2 class="visually-hidden">Условия получения подарка</h2>
-          <b class="gift__lead-text">Закажите все
-              и получите чехол для кота в подарок!</b>
-        </article>
+        <div class="additional-products__wrap">
+          <table class="additional-products__list add-products">
+            <tr class="add-products__item">
+              <td class="add-products__title">Сахарозаменитель</td>
+              <td class="add-products__count">1 упаковка (100 г)</td>
+              <td class="add-products__price">200 Р.</td>
+              <td class="add-products__link"><a class="add-products__button button button--accent" href="#">Заказать</a></td>
+            </tr>
+            <tr class="add-products__item">
+              <td class="add-products__title">Питьевая вода</td>
+              <td class="add-products__count">5 литров</td>
+              <td class="add-products__price">50 Р.</td>
+              <td class="add-products__link"><a class="add-products__button button button--accent" href="#">Заказать</a></td>
+            </tr>
+            <tr class="add-products__item">
+              <td class="add-products__title">Молоко</td>
+              <td class="add-products__count">1 литр</td>
+              <td class="add-products__price">100 Р.</td>
+              <td class="add-products__link"><a class="add-products__button button button--accent" href="#">Заказать</a></td>
+            </tr>
+            <tr class="add-products__item">
+              <td class="add-products__title">Витамины</td>
+              <td class="add-products__count">1 упаковка (30 г)</td>
+              <td class="add-products__price">300 Р.</td>
+              <td class="add-products__link"><a class="add-products__button button button--accent" href="#">Заказать</a></td>
+            </tr>
+          </table>
+          <article class="additional-products__gift gift">
+            <h2 class="visually-hidden">Условия получения подарка</h2>
+            <b class="gift__lead-text">Закажите все
+                и получите чехол для кота в подарок!</b>
+          </article>
+        </div>
       </section>
-      <section class="contacts contacts--main">
+      <section class="contacts contacts--inverse">
         <h2 class="visually-hidden">Контакты</h2>
         <div class="contacts__wrap">
           <b class="contacts__lead-text">приглашаем к сотрудничеству дилеров!</b>
@@ -211,15 +213,19 @@
       </section>
     </main>
     <footer class="page-footer">
-      <img class="page-footer__logo" src="img/logo-footer.svg" alt="логотип кэтЭнерджи"  width="128" height="34">
-      <ul class="page-footer__social social">
-        <li class="social__item social__item--vk"><span class="visually-hidden">Вконтакте</span></li>
-        <li class="social__item social__item--instagram"><span class="visually-hidden">Инстаграмм</span></li>
-        <li class="social__item social__item--facebook"><span class="visually-hidden">Фейсбук</span></li>
-      </ul>
-      <div class="page-footer__developer developer">
-        <p class="developer__text">HTML Academy</p>
-        <img class="developer__logo" src="img/htmlacademy.svg" alt="логотип HTML Academy" width="27" height="34">
+      <div class="page-footer__container">
+        <p class="page-footer__wrap">
+          <img class="page-footer__logo" src="img/logo-footer.svg" alt="логотип кэтЭнерджи" width="128" height="34">
+        </p>
+        <ul class="page-footer__social social">
+          <li class="social__item social__item--vk"><span class="visually-hidden">Вконтакте</span></li>
+          <li class="social__item social__item--instagram"><span class="visually-hidden">Инстаграмм</span></li>
+          <li class="social__item social__item--facebook"><span class="visually-hidden">Фейсбук</span></li>
+        </ul>
+        <div class="page-footer__developer developer">
+          <p class="developer__text">HTML Academy</p>
+          <img class="developer__logo" src="img/htmlacademy.svg" alt="логотип HTML Academy" width="27" height="34">
+        </div>
       </div>
     </footer>
   </body>

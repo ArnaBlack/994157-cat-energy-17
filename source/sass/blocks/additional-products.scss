@@ -1,1 +1,47 @@
 @import "../vars.scss";
+
+.additional-products {
+  width: 320px;
+  padding: 30px 30px 35px;
+  margin: 0 auto;
+}
+
+.additional-products__list {
+  margin-bottom: 39px;
+}
+
+.additional-products__title {
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: $tablet-width) {
+  .additional-products {
+    width: 768px;
+    padding: 30px 30px 76px;
+ }
+
+ .additional-products__list {
+   margin-bottom: 69px;
+ }
+
+.additional-products__title {
+   margin-bottom: 70px;
+ }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .additional-products {
+    width: 1220px;
+    padding: 0;
+  }
+
+  .additional-products__list {
+    padding: 5px 0;
+    margin-bottom: 0;
+  }
+
+  .additional-products__wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+}

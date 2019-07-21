@@ -1,5 +1,20 @@
 @import "../vars.scss";
 
+.add-products {
+  width: 100%;
+}
+
+.add-products__item {
+  padding: 14px 0 17px;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid $border-color;
+
+  &:last-child {
+    border-bottom: 1px solid $border-color;
+  }
+}
+
 .add-products__title {
   color: #222222;
   font-family: $Font;
@@ -7,4 +22,40 @@
   font-weight: 400;
   line-height: 16px;
   text-transform: uppercase;
+}
+
+@media screen and (min-width: $tablet-width) {
+  .add-products__item  {
+    padding: 28px 35px;
+    line-height: 20px;
+    border-top: 1px solid $border-color;
+    border-left: 1px solid $border-color;
+    border-right: 1px solid $border-color;
+
+    &:last-child {
+      border-bottom: 1px solid $border-color;
+    }
+  }
+
+  .add-products-title {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .add-products {
+    width: 893px;
+  }
+
+  .add-products__item {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 0;
+    border: none;
+
+    &:last-child {
+      border: none;
+    }
+  }
 }

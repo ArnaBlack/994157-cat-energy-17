@@ -5,6 +5,10 @@
   margin: 0 auto;
   padding: 30px 20px 25px;
 
+  &--main {
+    background-color: $white;
+  }
+
   &--inverse {
     background-color: $light-bg;
   }
@@ -35,6 +39,10 @@
   .contacts {
     width: 768px;
     padding: 70px;
+
+    &--inverse {
+    background-color: $white;
+    }
   }
 
   .contacts__lead-text {
@@ -52,6 +60,7 @@
     width: 100%;
     padding: 0;
     position: relative;
+    background: $white;
   }
 
   .contacts__wrap {
