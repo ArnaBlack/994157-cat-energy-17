@@ -8,3 +8,10 @@
 .catalog__title {
   padding: 32px 0 35px;
 }
+
+@media screen and (min-width: 768px) {
+  .catalog {
+    width: 768px;
+    padding: 0 30px;
+  }
+}
