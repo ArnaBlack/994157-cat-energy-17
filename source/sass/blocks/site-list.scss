@@ -4,6 +4,12 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  text-align: center;
+}
+
+.site-list__item {
+  padding: 20px;
+  border-bottom: 1px solid $border-color;
 }
 
 .site-list__link {
@@ -13,4 +19,35 @@
   font-weight: 500;
   line-height: 20px;
   text-transform: uppercase;
+}
+
+@media screen and (min-width: $tablet-width) {
+  .site-list {
+    width: 478px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .site-list__item {
+    padding: 20px 15px;
+    border-bottom: none;
+  }
+
+  .site-list__link {
+    font-size: 18px;
+    line-height: 24.86px;
+    font-weight: 400;
+    color: #222222;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .site-list {
+    width: 517px;
+  }
+
+  .site-list__link {
+    color: $white;
+    font-size: 20px;
+  }
 }

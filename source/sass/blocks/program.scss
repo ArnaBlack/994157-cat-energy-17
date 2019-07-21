@@ -1,5 +1,11 @@
 @import "../vars.scss";
 
+.program {
+  width: 320px;
+  padding: 0 20px;
+  margin: auto;
+}
+
 .program__list {
   list-style: none;
   margin: 0;
@@ -7,11 +13,14 @@
 }
 
 .program__item {
+  padding: 20px;
+  margin-bottom: 20px;
   background-color: $light-bg;
 }
 
 .program__title {
   margin: 0;
+  padding: 15px 5px 15px 80px;
   color: $dark-text;
   font-family: $Font;
   font-size: 24px;
@@ -22,13 +31,61 @@
 
 .program__description {
   margin: 0;
+  margin-bottom: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid $border-color;
 }
 
 .program__link {
+  padding-right: 36px;
   color: $dark-text;
   font-family: $Font;
   font-size: 16px;
   font-weight: 400;
   line-height: 16px;
   text-transform: uppercase;
+}
+
+@media screen and (min-width: $tablet-width) {
+  .program {
+    width: 748px;
+  }
+
+  .program__title {
+    padding-left: 0;
+  }
+
+  .program__link {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .program__item {
+    padding: 55px 285px 60px 50px;
+  }
+
+  .program__description {
+    border: none;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .program {
+    width: 1220px;
+    margin: 0 auto;
+  }
+
+  .program__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .program__item {
+    width: 570px;
+    padding: 40px 50px 60px;
+  }
+
+  .program__description {
+    line-height: 24px;
+  }
 }
