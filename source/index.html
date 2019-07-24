@@ -9,7 +9,7 @@
   </head>
   <body>
     <header class="page-header page-header--index">
-      <nav class="page-header__main-nav main-nav">
+      <nav class="main-nav main-nav--open main-nav--nojs">
         <div class="main-nav__wrap">
           <a aria-label="логотип Кэт энерджи">
             <img class="main-nav__logo-img" src="img/logo-mobile.svg" width="191" height="38" alt="логотип Кэт энерджи">
@@ -17,9 +17,9 @@
           <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         </div>
         <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--active"><a class="site-list__link">Главная</a></li>
-          <li class="site-list__item"><a class="site-list__link" href="catalog.html">Каталог продукции</a></li>
-          <li class="site-list__item"><a class="site-list__link" href="form.html">Подбор программы</a></li>
+          <li class="site-list__item site-list__item--active"><a class="site-list__link site-list__link--inverse">Главная</a></li>
+          <li class="site-list__item"><a class="site-list__link site-list__link--inverse" href="catalog.html">Каталог продукции</a></li>
+          <li class="site-list__item"><a class="site-list__link site-list__link--inverse" href="form.html">Подбор программы</a></li>
         </ul>
       </nav>
     </header>
@@ -82,13 +82,17 @@
         </div>
         <div class="stats__block stats__block--right preview">
           <div class="preview__wrap">
-            <img class="preview__img preview__img--before" src="#" alt="фото кота до" width="" height="">
-            <img class="preview__img preview__img--after" src="#" alt="фото кота после" width="" height="">
-            <fieldset class="priview__group range">
+            <div class="preview__img-wrap">
+              <img class="preview__img preview__img--before" src="#" alt="фото кота до" width="" height="">
+              <img class="preview__img preview__img--after" src="#" alt="фото кота после" width="" height="">
+            </div>
+            <fieldset class="preview__group range">
                 <p class="range__text range__text--before">Было</p>
-                <label  class="visually-hidden" for="range-input">Изменить изображение</label>
-                <input class="range__input" id="range-input" type="range">
-                <button class="range__button" type="button" aria-label="кнопка изменения изображения"></button>
+                <div class="range__input-wrap">
+                  <label  class="visually-hidden" for="range-input">Изменить изображение</label>
+                  <input class="range__input" id="range-input" type="range">
+                  <button class="range__button" type="button" aria-label="кнопка изменения изображения"></button>
+                </div>
                 <p class="range__text range__text--after">Стало</p>
             </fieldset>
           </div>
@@ -102,22 +106,24 @@
         </div>
         <div class="contacts__map"></div>
       </section>
-      <footer class="page-footer">
-        <div class="page-footer__container">
-          <p class="page-footer__wrap">
-            <img class="page-footer__logo" src="img/logo-footer.svg" alt="логотип кэтЭнерджи" width="128" height="34">
-          </p>
-          <ul class="page-footer__social social">
-            <li class="social__item social__item--vk"><span class="visually-hidden">Вконтакте</span></li>
-            <li class="social__item social__item--instagram"><span class="visually-hidden">Инстаграмм</span></li>
-            <li class="social__item social__item--facebook"><span class="visually-hidden">Фейсбук</span></li>
-          </ul>
-          <div class="page-footer__developer developer">
-            <p class="developer__text">HTML Academy</p>
-            <img class="developer__logo" src="img/htmlacademy.svg" alt="логотип HTML Academy" width="27" height="34">
-          </div>
-        </div>
-      </footer>
+
     </main>
+    <footer class="page-footer">
+      <div class="page-footer__container">
+        <p class="page-footer__wrap">
+          <img class="page-footer__logo" src="img/logo-footer.svg" alt="логотип кэтЭнерджи" width="128" height="34">
+        </p>
+        <ul class="page-footer__social social">
+          <li class="social__item social__item--vk"><span class="visually-hidden">Вконтакте</span></li>
+          <li class="social__item social__item--instagram"><span class="visually-hidden">Инстаграмм</span></li>
+          <li class="social__item social__item--facebook"><span class="visually-hidden">Фейсбук</span></li>
+        </ul>
+        <div class="page-footer__developer developer">
+          <p class="developer__text">HTML Academy</p>
+          <img class="developer__logo" src="img/htmlacademy.svg" alt="логотип HTML Academy" width="27" height="34">
+        </div>
+      </div>
+    </footer>
+    <script src="js/index.js"></script>
   </body>
 </html>

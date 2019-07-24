@@ -5,8 +5,7 @@
 }
 
 .page-footer__container {
-  width: 320px;
-  margin: 0 auto;
+  width: 100%;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -17,6 +16,7 @@
 .page-footer__wrap {
   width: 100%;
   padding: 10px 0 30px;
+  margin: 0;
   display: flex;
   justify-content: center;
   border-bottom: 1px solid $border-color;

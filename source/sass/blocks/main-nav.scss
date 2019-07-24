@@ -1,17 +1,113 @@
 @import "../vars.scss";
 
-.main-nav {
-  width: 320px;
-  margin: 0 auto;
+.main-nav__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 11px 20px 16px;
+  border-bottom: 1px solid $border-color;
+}
+
+.main-nav__logo-img {
+  height: 38px;
+}
+
+.main-nav__toggle {
+  position: relative;
+  width: 24px;
+  height: 2px;
+  cursor: pointer;
+  border: none;
+  background-color: #222222;
+  transition: background-color 0.3s ease;
+}
+
+.main-nav--closed .main-nav__toggle::before,
+.main-nav--closed .main-nav__toggle::after,
+.main-nav--open .main-nav__toggle::before,
+.main-nav--open .main-nav__toggle::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  left: 0;
+  background-color: #222222;
+  transition: transform 0.3s ease;
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  top: -7px;
+}
+
+.main-nav--closed .main-nav__toggle::after {
+  bottom: -7px;
+}
+
+.main-nav--open .main-nav__toggle {
+  background-color: transparent;
+}
+
+.main-nav--open .main-nav__toggle::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.main-nav--open .main-nav__toggle::after {
+  bottom: 0;
+  transform: rotate(-45deg);
+}
+
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: $mobile-width-only) {
+  .main-nav--closed .main-nav__list {
+    height: 0;
+    opacity: 0;
+    transition: height 0.8s ease, opacity 0.3s ease;
+  }
+
+  .main-nav--open .main-nav__list {
+    height: 192px;
+    opacity: 1;
+    transition: height 0.8s ease, opacity 0.3s ease;
+  }
+
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
 }
 
 @media screen and (min-width: $tablet-width) {
   .main-nav {
-    width: auto;
-    margin: 0;
+    padding: 24px 10px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .main-nav__wrap {
+    padding: 0 20px;
+    display: inline-block;
+    vertical-align: middle;
+    border: none;
   }
 
   .main-nav__toggle {
     display: none;
+  }
+
+  .main-nav__logo-img {
+    /*временно для сетки*/
+    width: 173px;
+    height: 58px;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .main-nav__logo-img {
+    height: 59px;
   }
 }

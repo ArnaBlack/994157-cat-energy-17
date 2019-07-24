@@ -1,9 +1,8 @@
 @import "../vars.scss";
 
 .program {
-  width: 320px;
+  width: 100%;
   padding: 0 20px;
-  margin: auto;
 }
 
 .program__list {
@@ -13,7 +12,7 @@
 }
 
 .program__item {
-  padding: 20px;
+  padding: 22px 20px;
   margin-bottom: 20px;
   background-color: $light-bg;
 }
@@ -48,7 +47,7 @@
 
 @media screen and (min-width: $tablet-width) {
   .program {
-    width: 748px;
+    padding: 0 30px;
   }
 
   .program__title {

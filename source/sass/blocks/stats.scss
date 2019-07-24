@@ -1,40 +1,74 @@
 @import "../vars.scss";
 
 .stats {
-  width: 320px;
-  margin: 0 auto;
+  width: 100%;
   padding: 30px 20px 39px;
   background-color: $light-bg;
 }
 
+.stats__title {
+  margin-bottom: 33px;
+}
+
 .stats__text {
   margin: 0;
+  margin-bottom: 27px;
+  padding-right: 14px;
+}
+
+.stats__list {
+  width: 100%;
+  margin-bottom: 22px;
+}
+
+.stats__list tr {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.stats__cell {
+  width: 124px;
+  padding-bottom: 15px;
+  position: relative;
+  text-align: center;
 }
 
 .stats__value {
   margin: 0;
+  padding: 18px 19px;
   color: $dark-text;
   font-family: $Font;
   font-size: 24px;
   font-weight: 400;
   line-height: 24px;
   text-transform: uppercase;
+  border-radius: 3px;
+  border: 1px solid $border-color;
 }
 
 .stats__desc {
+  padding: 0 15px;
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
   font-size: 12px;
   font-weight: 400;
   line-height: 12px;
+  background-color: $light-bg;
 }
 
 .stats__total {
   margin: 0;
+  margin-bottom: 44px;
   color: $dark-text;
   font-family: $Font;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
   text-transform: uppercase;
+  text-align: center;
 }
 
 @media screen and (min-width: $tablet-width) {
