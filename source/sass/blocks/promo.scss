@@ -10,7 +10,7 @@
 }
 
 .promo__wrap {
-  padding: 30px 20px 20px;
+  padding: 30px 20px 23px;
   display: flex;
   flex-direction: column;
 }
@@ -19,7 +19,7 @@
   width: 100%;
   max-width: 300px;
   margin: 0 auto;
-  margin-bottom: 19px;
+  margin-bottom: 23px;
 }
 
 .promo__lead-text {
@@ -44,8 +44,8 @@
   }
 
   .promo__wrap {
-    padding-top: 60px;
-    padding-left: 90px;
+    padding-top: 52px;
+    padding-left: 118px;
     padding-right: 30px;
     padding-bottom: 529px;
     position: relative;
@@ -68,7 +68,7 @@
     max-width: 415px;
     padding: 0;
     margin: 0;
-    margin-bottom: 33px;
+    margin-bottom: 40px;
     text-align: left;
   }
 
@@ -81,15 +81,19 @@
   .promo {
     width: 100%;
     margin: 0;
-    padding: 142px 0 80px;
+    padding: 142px 0 57px;
     background-image: url("../img/index-background-desktop@1x.jpg");
     background-position: top right;
   }
 
   .promo__wrap {
     width: 1220px;
-    padding: 84px 59px 133px 0;
+    padding: 81px 59px 133px 80px;
     margin: 0 auto;
+  }
+
+  .promo__lead-text {
+    margin-bottom: 54px;
   }
 
   .promo__img {

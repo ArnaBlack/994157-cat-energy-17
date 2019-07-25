@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 11px 20px 16px;
+  padding: 11px 20px;
   border-bottom: 1px solid $border-color;
 }
 
@@ -82,7 +82,7 @@
 
 @media screen and (min-width: $tablet-width) {
   .main-nav {
-    padding: 24px 10px 0px;
+    padding: 22px 10px 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -107,6 +107,10 @@
 }
 
 @media screen and (min-width: $desktop-width) {
+  .main-nav {
+    padding-top: 54px;
+  }
+
   .main-nav__logo-img {
     height: 59px;
   }

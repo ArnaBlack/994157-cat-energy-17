@@ -2,8 +2,8 @@
 
 .working {
   width: 100%;
-  padding: 0 20px;
-  padding-bottom: 42px;
+  padding: 10px 20px;
+  padding-bottom: 38px;
 }
 
 .working__list {
@@ -17,18 +17,22 @@
 }
 
 .working__item {
+  position: relative;
   padding: 6px 0;
   padding-left: 80px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 
   &:last-child {
     margin-bottom: 0;
   }
 }
 
+.working__item br {
+  display: none;
+}
+
 @media screen and (min-width: $tablet-width) {
   .working {
-    width: 768px;
     padding: 0 30px;
   }
 
@@ -41,17 +45,71 @@
 
   .working__item {
     width: 245px;
-    padding: 0;
-    margin-bottom: 85px;
+    padding: 114px 0px 50px 0;
+    margin-bottom: 81px;
+
+    &::after {
+      width: 71px;
+      height: 228px;
+      position: absolute;
+      top: 0;
+      right: 25%;
+      color: $light-bg;
+      font-family: $Font;
+      font-size: 281px;
+      font-weight: 400;
+      line-height: 205px;
+      z-index: -1;
+    }
+
+    &--first::after {
+      content: "1";
+    }
+
+    &--second::after  {
+      content: "2";
+    }
+
+    &--third::after  {
+      content: "3";
+    }
+
+    &--fouth::after  {
+      content: "4";
+    }
+
+    &--third,
+    &--fouth {
+      margin-bottom: 50px;
+    }
+  }
+
+  .working__title {
+    margin-bottom: 71px;
+  }
+}
+
+@media screen and (min-width: $tablet-width-only) {
+  .working__item br {
+    display: inline-block;
   }
 }
 
 @media screen and (min-width: $desktop-width) {
   .working {
-    width: 1220px;
+    width: 1280px;
+    margin: 0 auto;
+  }
+
+  .working__list {
+    padding-right: 0;
+  }
+
+  .working__item {
+    margin-bottom: 0;
   }
 
   .working__title {
-    margin-bottom: 60px;
+    margin-bottom: 70px;
   }
 }

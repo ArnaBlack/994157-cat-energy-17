@@ -7,24 +7,38 @@
 }
 
 .products__item {
-  padding: 25px 20px;
+  padding: 22px 20px;
+  display: flex;
+  flex-wrap: wrap;
   border-top: 1px solid $border-color;
 }
 
+.products__preview {
+  width: 140px;
+  height: 144px;
+}
+
 .products__desc {
-  width: 100%;
+  width: 50%;
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
 }
 
 .products__caption {
+  width: 74px;
+  margin-bottom: 8px;
+  text-align: left;
   font-family: $Font;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
   text-transform: uppercase;
   color: $dark-text;
+}
+
+.products__button {
+  width: 100%;
 }
 
 @media screen and (min-width: $tablet-width) {
