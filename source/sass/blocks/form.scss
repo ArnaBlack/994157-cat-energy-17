@@ -10,13 +10,46 @@
 }
 
 .form__field-group {
-  padding: 0;
+  padding: 0 20px;
+  margin: 0;
   border: none;
+
+  &:last-of-type {
+    margin-bottom: 34px;
+  }
 }
 
+.form__title {
+  max-width: 204px;
+  padding: 31px 22px 31px 0;
+  position: relative;
+  color: $dark-text;
+  font-size: 24px;
+  line-height: 24px;
+  text-transform: none;
+
+  &::after {
+    content: "";
+    width: 500%;
+    height: 3px;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    background-color: $accent;
+  }
+}
 
 .form__input-block {
   margin: 0;
+  margin-bottom: 14px;
+}
+
+.form__input-block:last-of-type {
+  margin-bottom: none;
+}
+
+.form__textarea {
+  width: 100%;
 }
 
 .form__legend {
@@ -26,3 +59,8 @@
   line-height: 16px;
 }
 
+@media screen and (max-width: $mobile-width-only) {
+  .form__title--crooked::after {
+    top: 40%;
+  }
+}

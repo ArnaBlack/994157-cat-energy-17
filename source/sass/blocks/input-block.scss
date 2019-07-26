@@ -1,3 +1,16 @@
 @import "../vars.scss";
 
+.input-block {
+  display: flex;
+  align-items: center;
+}
 
+.input-block__label {
+  white-space: nowrap;
+  margin-right: 15px;
+}
+
+.input-block__input {
+  width: 100%;
+  flex-grow: 1;
+}

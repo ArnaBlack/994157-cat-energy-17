@@ -1,8 +1,6 @@
 @import "../vars.scss";
 
 .input {
-  width: 100%;
-  max-width: 229px;
   padding: 15px;
   box-sizing: border-box;
   font: inherit;
@@ -21,10 +19,9 @@
 
 .input:focus {
   border: 2px solid $light-text;
+  outline: none;
 }
 
 .input:focus::placeholder {
   color: transparent;
 }
-
-

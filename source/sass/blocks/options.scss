@@ -1,7 +1,57 @@
 @import "../vars.scss";
 
+.options {
+  &--radio {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $border-color;
+    border-top: 1px solid $border-color;
+  }
+}
+
 .options__list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
+
+.options__item {
+  margin-bottom: 7px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.options__label {
+  padding: 6px 0 6px 46px;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.options__input + .options__label::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid $border-color;
+}
+
+.options__input--radio + .options__label::before {
+  border-radius: 50%;
+}
+
+.options__input--radio:checked + .options__label::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  top: 9px;
+  left: 9px;
+  background-color: $accent;
+  border-radius: 50%;
+}
+
