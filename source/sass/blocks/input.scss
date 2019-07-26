@@ -1,0 +1,30 @@
+@import "../vars.scss";
+
+.input {
+  width: 100%;
+  max-width: 229px;
+  padding: 15px;
+  box-sizing: border-box;
+  font: inherit;
+  text-transform: uppercase;
+  color: inherit;
+  border: 1px solid rgba($border-color, 50%);
+}
+
+.input::placeholder {
+  color: inherit;
+}
+
+.input:hover {
+  border: 1px solid $border-color;
+}
+
+.input:focus {
+  border: 2px solid $light-text;
+}
+
+.input:focus::placeholder {
+  color: transparent;
+}
+
+

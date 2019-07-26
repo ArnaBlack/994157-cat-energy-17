@@ -1,7 +1,16 @@
 @import "../vars.scss";
 
+.selection {
+  padding: 30px 20px;
+}
+
+.selection__title {
+  margin-bottom: 35px;
+}
+
 .selection__description {
   margin: 0;
+  margin-bottom: 39px;
   color: $dark-text;
   font-family: $Font;
   font-size: 14px;

@@ -11,6 +11,12 @@
 
 .form__field-group {
   padding: 0;
+  border: none;
+}
+
+
+.form__input-block {
+  margin: 0;
 }
 
 .form__legend {
@@ -20,11 +26,3 @@
   line-height: 16px;
 }
 
-.form__input {
-  padding: 15px;
-  box-sizing: border-box;
-  font: inherit;
-  text-transform: uppercase;
-  color: inherit;
-  border: 1px solid $border-color;
-}
