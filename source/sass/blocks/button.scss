@@ -15,11 +15,29 @@
   &--accent {
     color: $white;
     background-color: $accent;
+
+    &:hover,
+    &:active {
+      background-color: $accentActive;
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
   }
 
   &--inverse {
     color: $dark-text;
     background-color: $light-bg;
+
+    &:hover,
+    &:active {
+      background-color: $light-bgActive;
+    }
+
+    &:active {
+      color: rgba(68, 68, 68, 0.3);
+    }
   }
 }
 

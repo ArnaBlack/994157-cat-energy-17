@@ -2,7 +2,6 @@
 
 .working {
   width: 100%;
-  padding: 10px 20px;
   padding-bottom: 38px;
 }
 
@@ -32,10 +31,6 @@
 }
 
 @media screen and (min-width: $tablet-width) {
-  .working {
-    padding: 0 30px;
-  }
-
   .working__list {
     padding-right: 80px;
     display: flex;
@@ -96,11 +91,6 @@
 }
 
 @media screen and (min-width: $desktop-width) {
-  .working {
-    width: 1280px;
-    margin: 0 auto;
-  }
-
   .working__list {
     padding-right: 0;
   }

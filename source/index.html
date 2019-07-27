@@ -26,14 +26,14 @@
     <main class="page-main">
       <h1 class="visually-hidden">Интернет-магазин функционального питания для котов</h1>
       <section class="promo">
-        <div class="promo__wrap">
+        <div class="promo__wrap container">
           <h2 class="promo__title title title--inverse">Функциональное питание для котов</h2>
           <b class="promo__lead-text">Занялся собой? Займись котом!</b>
           <a class="button promo__button button--accent">Подобрать программу</a>
           <img  class="promo__img" src="img/index-can-mobile@1x.png" alt="фото продукта" width="280" height="270">
         </div>
       </section>
-      <section class="program">
+      <section class="program container">
         <h2 class="visually-hidden">Программы</h2>
         <ul class="program__list">
           <li class="program__item program__item--weight-loss">
@@ -49,7 +49,7 @@
           </li>
         </ul>
       </section>
-      <section class="working">
+      <section class="working container">
         <h2 class="working__title title title--main">Как это работает</h2>
         <ul class="working__list">
           <li class="working__item working__item--first">Функциональное питание содержит только полезные питательные вещества.</li>
@@ -58,7 +58,7 @@
           <li class="working__item working__item--fouth">Уже через месяц наслаждайтесь изменениями к лучшему <br>вашего питомца!</li>
         </ul>
       </section>
-      <section class="stats">
+      <section class="stats container">
         <div class="stats__block stats__block--left">
           <header class="stats__header">
             <h2 class="stats__title title title--main">Живой пример</h2>
@@ -101,10 +101,10 @@
       <section class="contacts contacts--main">
         <h2 class="visually-hidden">Контакты</h2>
         <div class="contacts__wrap">
-          <b class="contacts__lead-text">приглашаем к сотрудничеству дилеров!</b>
-          <p class="contacts__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+          <b class="contacts__lead-text">приглашаем<br> к сотрудничеству дилеров!</b>
+          <p class="contacts__adress"><span>ул. Большая Конюшенная, д. 19/8</span><span>Санкт-Петербург</span></p>
         </div>
-        <div class="contacts__map"></div>
+        <div class="contacts__map" id="map"></div>
       </section>
 
     </main>
@@ -124,6 +124,7 @@
         </div>
       </div>
     </footer>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=<3e3d67cb-e68e-4bba-af9b-1404fe80264e>&amp;lang=ru_RU" type="text/javascript"></script>
     <script src="js/index.js"></script>
   </body>
 </html>

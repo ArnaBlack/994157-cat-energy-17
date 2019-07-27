@@ -56,7 +56,11 @@ input[type="radio"].visually-hidden {
 }
 
 @import "blocks/button.scss";
+@import "blocks/input.scss";
+@import "blocks/input-block.scss";
+@import "blocks/container.scss";
 @import "blocks/title.scss";
+@import "blocks/title-block.scss";
 @import "blocks/page-header.scss";
 @import "blocks/main-nav.scss";
 @import "blocks/site-list.scss";
@@ -74,8 +78,6 @@ input[type="radio"].visually-hidden {
 @import "blocks/gift.scss";
 @import "blocks/selection.scss";
 @import "blocks/form.scss";
-@import "blocks/input.scss";
-@import "blocks/input-block.scss";
 @import "blocks/options.scss";
 @import "blocks/comment.scss";
 @import "blocks/social.scss";

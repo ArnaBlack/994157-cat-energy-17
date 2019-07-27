@@ -10,7 +10,24 @@
   margin-right: 15px;
 }
 
+.input-block__label sup {
+  top: 0;
+  font-size: 100%;
+}
+
 .input-block__input {
   width: 100%;
   flex-grow: 1;
+}
+
+@media screen and (min-width: $tablet-width) {
+  .input-block__label {
+    margin-right: 18px;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .input-block {
+    width: 568px;
+  }
 }

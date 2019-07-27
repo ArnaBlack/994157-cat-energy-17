@@ -17,6 +17,15 @@
   font-weight: 500;
   line-height: 20px;
   text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover {
+    color: $hoverTextColorDark;
+  }
+
+  &:active {
+    color: $activeTextColorDark;
+  }
 }
 
 @media screen and (min-width: $tablet-width) {
@@ -58,9 +67,18 @@
 
   .site-list__link {
     font-size: 20px;
+    color: $dark-text;
 
     &--inverse {
       color: $white;
+
+      &:hover {
+        color: $hoverTextColorLight;
+      }
+
+      &:active {
+        color: $activeTextColorLight;
+      }
     }
   }
 

@@ -1,14 +1,5 @@
 @import "../vars.scss";
 
-.options {
-  &--radio {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid $border-color;
-    border-top: 1px solid $border-color;
-  }
-}
-
 .options__list {
   margin: 0;
   padding: 0;
@@ -16,11 +7,7 @@
 }
 
 .options__item {
-  margin-bottom: 7px;
-
-  &:last-of-type {
-    margin-bottom: 0;
-  }
+  margin-bottom: 13px;
 }
 
 .options__label {
@@ -55,3 +42,46 @@
   border-radius: 50%;
 }
 
+
+@media screen and (min-width: $tablet-width) {
+
+  .options__list--checkbox {
+    padding-top: 39px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .options__item {
+    margin-bottom: 14px;
+  }
+
+  .options__item--checkbox {
+    width: 45.6%;
+    margin-bottom: 32px;
+  }
+
+  .options__label {
+    padding-left: 60px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+  }
+
+  .options__input + .options__label::before {
+    width: 40px;
+    height: 40px;
+  }
+
+  .options__input--radio:checked + .options__label::after {
+    width: 18px;
+    height: 18px;
+    left: 11px;
+    top: 11px;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .options__list--checkbox {
+    flex-wrap: nowrap;
+  }
+}

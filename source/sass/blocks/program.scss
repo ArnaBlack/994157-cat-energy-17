@@ -2,7 +2,6 @@
 
 .program {
   width: 100%;
-  padding: 0 20px;
 }
 
 .program__list {
@@ -48,7 +47,6 @@
 
 @media screen and (min-width: $tablet-width) {
   .program {
-    padding: 0 30px;
     margin-bottom: 43px;
   }
 
@@ -62,6 +60,10 @@
   .program__link {
     font-size: 20px;
     line-height: 20px;
+
+    &:active {
+      color: rgba(17, 17, 17,0.3);
+    }
   }
 
   .program__item {
@@ -83,7 +85,6 @@
 
 @media screen and (min-width: $desktop-width) {
   .program {
-    width: 1280px;
     padding-top: 79px;
     padding-bottom: 75px;
     margin: 0 auto;
