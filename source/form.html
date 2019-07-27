@@ -37,16 +37,16 @@
             <fieldset class="form__field-group form__field-group--pet">
               <p class="form__input-block input-block">
                 <label class="input-block__label">Имя:<sup>*</sup></label>
-                <input class="input input-block__input" type="text" placeholder="Барсик" required>
+                <input class="input input-block__input" name="pet-name" type="text" placeholder="Барсик" required>
               </p>
               <p class="form__input-block input-block">
                 <label class="input-block__label">вес (кг):<sup>*</sup>
                 </label>
-                <input class="input input-block__input" type="text" placeholder="7" pattern="[0-9]" required>
+                <input class="input input-block__input" name="pet-weight" type="text" placeholder="7" pattern="[0-9]" required>
               </p>
               <p class="form__input-block input-block">
                 <label class="input-block__label">возраст (лет):</label>
-                <input class="input input-block__input" type="text" placeholder="7" pattern="[0-9]">
+                <input class="input input-block__input" name="pet-age" type="text" placeholder="7" pattern="[0-9]">
               </p>
             </fieldset>
             <fieldset class="form__field-group options form__field-group--radio">
@@ -69,11 +69,11 @@
               <legend class="form__title title title--accent">Контактные данные (владельца кота)</legend>
               <p class="form__input-block input-block">
                 <label class="input-block__label">E-mail:<sup>*</sup></label>
-                <input class="input input-block__input" type="email" placeholder="kuklachev@gmail.com" required>
+                <input class="input input-block__input" name="master-name" type="email" placeholder="kuklachev@gmail.com" required>
               </p>
               <p class="form__input-block input-block">
                 <label class="input-block__label">телефон:<sup>*</sup></label>
-                <input class="input input-block__input" type="tel" placeholder="8 (960) 900-60-90" required>
+                <input class="input input-block__input" name="master-phone" type="tel" placeholder="8 (960) 900-60-90" pattern="[0-9]" required>
               </p>
             </fieldset>
             <fieldset class="form__field-group form__field-group--comment">
@@ -140,5 +140,6 @@
     </footer>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=<3e3d67cb-e68e-4bba-af9b-1404fe80264e>&amp;lang=ru_RU" type="text/javascript"></script>
     <script src="js/index.js"></script>
+    <script src="js/form.js"></script>
   </body>
 </html>
