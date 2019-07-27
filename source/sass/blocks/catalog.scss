@@ -5,20 +5,12 @@
 }
 
 .catalog__title {
-  padding: 26px 20px 40px;
+  padding-top: 26px;
+  padding-bottom: 40px;
 }
 
 @media screen and (min-width: $tablet-width) {
   .catalog {
-    width: 768px;
-    padding: 0 30px;
-  }
-}
-
-@media screen and (min-width: $desktop-width) {
-  .catalog {
-    width: 1220px;
-    padding: 0;
-    padding-top: 196px;
+    padding-top: 25px;
   }
 }

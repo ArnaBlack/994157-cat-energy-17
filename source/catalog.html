@@ -24,22 +24,22 @@
       </nav>
     </header>
     <main>
-      <section class="catalog">
+      <section class="catalog container">
         <h1 class="catalog__title title title--main">Каталог продукции</h1>
         <ul class="catalog__list products">
           <li class="products__item">
             <img  class="products__preview" src="http://placehold.it/150x100" alt="изображение продукта" width="140" height="144">
             <table class="products__desc">
               <caption class="products__caption">Cat Energy PRO <span  class="products__weight">500 г</span></caption>
-                <tr>
+                <tr class="products__row">
                   <td>Обьём</td>
                   <td class="products__weight">500 г</td>
                 </tr>
-                <tr>
+                <tr class="products__row">
                   <td>Вкус</td>
                   <td class="products__taste">Курица</td>
                 </tr>
-                <tr>
+                <tr class="products__row">
                   <td>Цена</td>
                   <td class="products__price">700 Р.</td>
                 </tr>
@@ -50,15 +50,15 @@
             <img  class="products__preview" src="http://placehold.it/150x100" alt="изображение продукта" width="140" height="144">
             <table class="products__desc">
               <caption class="products__caption">Cat Energy <span class="products__weight">PRO 1000 г</span></caption>
-                <tr>
+                <tr class="products__row">
                   <td>Обьём</td>
                   <td class="products__weight">1000 Г</td>
                 </tr>
-                <tr>
+                <tr class="products__row">
                   <td>Вкус</td>
                   <td class="products__taste">Курица</td>
                 </tr>
-                <tr>
+                <tr class="products__row">
                   <td>Цена</td>
                   <td class="products__price">1000 Р.</td>
                 </tr>
@@ -69,15 +69,15 @@
             <img  class="products__preview" src="http://placehold.it/150x100" alt="изображение продукта" width="140" height="144">
             <table class="products__desc">
               <caption class="products__caption">Cat Energy <span class="products__weight">PRO 500 г</span></caption>
-                <tr>
+                <tr class="products__row">
                   <td>Обьём</td>
                   <td class="products__weight">500 г</td>
                 </tr>
-                <tr>
+                <tr class="products__row">
                   <td>Вкус</td>
                   <td class="products__taste">Рыба</td>
                 </tr>
-                <tr>
+                <tr class="products__row">
                   <td>Цена</td>
                   <td class="products__price">700 Р.</td>
                 </tr>
@@ -88,15 +88,15 @@
             <img  class="products__preview" src="http://placehold.it/150x100" alt="изображение продукта" width="140" height="144">
             <table class="products__desc">
               <caption class="products__caption">Cat Energy <span class="products__weight">PRO 1000 г</span></caption>
-                <tr>
+                <tr class="products__row">
                   <td>Обьём</td>
                   <td class="products__weight">Рыба</td>
                 </tr>
-                <tr>
+                <tr class="products__row">
                   <td>Вкус</td>
                   <td class="products__taste">1000 г</td>
                 </tr>
-                <tr>
+                <tr class="products__row">
                   <td>Цена</td>
                   <td class="products__price">1000 Р.</td>
                 </tr>
@@ -107,15 +107,15 @@
             <img  class="products__preview" src="http://placehold.it/150x100" alt="изображение продукта" width="140" height="144">
             <table class="products__desc">
               <caption class="products__caption">Cat Energy <span class="products__weight">Slim 500 г</span></caption>
-                <tr>
+                <tr class="products__row">
                   <td>Обьём</td>
                   <td class="products__weight">500 г</td>
                 </tr>
-                <tr>
+                <tr class="products__row">
                   <td>Вкус</td>
                   <td class="products__taste">Гречка</td>
                 </tr>
-                <tr>
+                <tr class="products__row">
                   <td>Цена</td>
                   <td class="products__price">400 Р.</td>
                 </tr>
@@ -126,15 +126,15 @@
             <img  class="products__preview" src="http://placehold.it/150x100" alt="изображение продукта" width="140" height="144">
             <table class="products__desc">
               <caption class="products__caption">Cat Energy <span class="products__weight">Slim 1000 г</span></caption>
-                <tr>
+                <tr class="products__row">
                   <td>Обьём</td>
                   <td class="products__weight">1000 г</td>
                 </tr>
-                <tr>
+                <tr class="products__row">
                   <td>Вкус</td>
                   <td class="products__taste">Гречка</td>
                 </tr>
-                <tr>
+                <tr class="products__row">
                   <td>Цена</td>
                   <td class="products__price">700 Р.</td>
                 </tr>
@@ -145,15 +145,15 @@
             <img  class="products__preview" src="http://placehold.it/150x100" alt="изображение продукта" width="140" height="144">
             <table class="products__desc">
               <caption class="products__caption">Cat Energy <span class="products__weight">Slim 500 г</span></caption>
-                <tr>
+                <tr class="products__row">
                   <td>Обьём</td>
                   <td class="products__weight">500 г</td>
                 </tr>
-                <tr>
+                <tr class="products__row">
                   <td>Вкус</td>
                   <td class="products__taste">Рис</td>
                 </tr>
-                <tr>
+                <tr class="products__row">
                   <td>Цена</td>
                   <td class="products__price">500 Р.</td>
                 </tr>
@@ -167,47 +167,56 @@
           </li>
         </ul>
       </section>
-      <section class="additional-products">
-        <h2 class="additional-products__title title title--small">Дополнительные товары</h2>
+      <section class="additional-products container">
+        <h2 class="additional-products__title title title--accent">Дополнительные товары</h2>
         <div class="additional-products__wrap">
           <table class="additional-products__list add-products">
             <tr class="add-products__item">
               <td class="add-products__title">Сахарозаменитель</td>
-              <td class="add-products__count">1 упаковка (100 г)</td>
-              <td class="add-products__price">200 Р.</td>
+              <td class="add-products__options">
+                <p class="add-products__count">1 упаковка (100 г)</p>
+                <p class="add-products__price">200 Р.</p>
+              </td>
               <td class="add-products__link"><a class="add-products__button button button--accent" href="#">Заказать</a></td>
             </tr>
             <tr class="add-products__item">
               <td class="add-products__title">Питьевая вода</td>
-              <td class="add-products__count">5 литров</td>
-              <td class="add-products__price">50 Р.</td>
+              <td class="add-products__options">
+                <p class="add-products__count">5 литров</p>
+                <p class="add-products__price">50 Р.</p>
+              </td>
               <td class="add-products__link"><a class="add-products__button button button--accent" href="#">Заказать</a></td>
             </tr>
             <tr class="add-products__item">
               <td class="add-products__title">Молоко</td>
-              <td class="add-products__count">1 литр</td>
-              <td class="add-products__price">100 Р.</td>
+              <td class="add-products__options">
+                <p class="add-products__count">1 литр</p>
+                <p class="add-products__price">100 Р.</p>
+              </td>
               <td class="add-products__link"><a class="add-products__button button button--accent" href="#">Заказать</a></td>
             </tr>
             <tr class="add-products__item">
               <td class="add-products__title">Витамины</td>
-              <td class="add-products__count">1 упаковка (30 г)</td>
-              <td class="add-products__price">300 Р.</td>
+              <td class="add-products__options">
+                <p class="add-products__count">1 упаковка (30 г)</p>
+                <p class="add-products__price">300 Р.</p>
+              </td>
               <td class="add-products__link"><a class="add-products__button button button--accent" href="#">Заказать</a></td>
             </tr>
           </table>
           <article class="additional-products__gift gift">
             <h2 class="visually-hidden">Условия получения подарка</h2>
-            <b class="gift__lead-text">Закажите все
-                и получите чехол для кота в подарок!</b>
+            <b class="gift__lead-text">Закажите все <br>и получите чехол для кота в подарок!</b>
           </article>
         </div>
       </section>
-      <section class="contacts contacts--inverse">
+      <section class="contacts  contacts--inverse">
         <h2 class="visually-hidden">Контакты</h2>
-        <div class="contacts__wrap">
-          <b class="contacts__lead-text">приглашаем<br> к сотрудничеству дилеров!</b>
-          <p class="contacts__adress"><span>ул. Большая Конюшенная, д. 19/8</span><span>Санкт-Петербург</span></p>
+        <div class="contacts__wrap container">
+          <div class="contacts__block">
+            <b class="contacts__lead-text">приглашаем<br> к сотрудничеству дилеров!</b>
+            <p class="contacts__adress"><span>ул. Большая Конюшенная, д. 19/8</span><span>Санкт-Петербург</span></p>
+          </div>
         </div>
         <div class="contacts__map" id="map"></div>
       </section>

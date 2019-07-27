@@ -38,4 +38,5 @@
           iconImageOffset: [-60, -106] //координаты смещения
         });
       map.geoObjects.add(placemark);
+      map.behaviors.disable('scrollZoom');
       };

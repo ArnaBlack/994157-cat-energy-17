@@ -1,40 +1,39 @@
 @import "../vars.scss";
 
 .additional-products {
-  width: 320px;
-  padding: 30px 30px 35px;
-  margin: 0 auto;
+  padding-bottom: 35px;
+  padding-top: 8px;
 }
 
 .additional-products__list {
-  margin-bottom: 39px;
+  margin-bottom: 37px;
 }
 
 .additional-products__title {
-  margin-bottom: 30px;
+  max-width: 250px;
+  margin-bottom: 12px;
 }
 
 @media screen and (min-width: $tablet-width) {
   .additional-products {
-    width: 768px;
-    padding: 30px 30px 76px;
-  }
-
-  .additional-products__list {
-    margin-bottom: 69px;
+    padding-top: 0;
+    padding-bottom: 76px;
+    margin-top: -17px;
   }
 
   .additional-products__title {
-    margin-bottom: 70px;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 59px;
+    max-width: 100%;
+  }
+
+  .additional-products__list {
+    margin-bottom: 67px;
   }
 }
 
 @media screen and (min-width: $desktop-width) {
-  .additional-products {
-    width: 1220px;
-    padding: 0;
-  }
-
   .additional-products__list {
     padding: 5px 0;
     margin-bottom: 0;

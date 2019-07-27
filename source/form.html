@@ -66,7 +66,7 @@
               </ul>
             </fieldset>
             <fieldset class="form__field-group form__field-group--contacts">
-              <legend class="form__title title">Контактные данные (владельца кота)</legend>
+              <legend class="form__title title title--accent">Контактные данные (владельца кота)</legend>
               <p class="form__input-block input-block">
                 <label class="input-block__label">E-mail:<sup>*</sup></label>
                 <input class="input input-block__input" type="email" placeholder="kuklachev@gmail.com" required>
@@ -77,12 +77,12 @@
               </p>
             </fieldset>
             <fieldset class="form__field-group form__field-group--comment">
-              <legend class="form__title title">Комментарий</legend>
+              <legend class="form__title title title--accent">Комментарий</legend>
               <label class="visually-hidden" for="comment">Расскажите обо всех повадках кота</label>
               <textarea class="input form__textarea" id="comment" rows="6" placeholder="Расскажите обо всех повадках кота"></textarea>
             </fieldset>
             <fieldset class="form__field-group options form__field-group--checkbox">
-                <legend class="form__title title">Дополнительно</legend>
+                <legend class="form__title title title--accent">Дополнительно</legend>
                 <ul class="options__list options__list--checkbox">
                     <li class="options__item options__item--checkbox">
                       <input class="options__input options__input--checkbox visually-hidden" id="sweetener" type="checkbox" name="sweetener">
@@ -113,9 +113,11 @@
       </section>
       <section class="contacts contacts--inverse">
         <h2 class="visually-hidden">Контакты</h2>
-        <div class="contacts__wrap">
-          <b class="contacts__lead-text">приглашаем<br> к сотрудничеству дилеров!</b>
-          <p class="contacts__adress"><span>ул. Большая Конюшенная, д. 19/8</span><span>Санкт-Петербург</span></p>
+        <div class="contacts__wrap container">
+          <div class="contacts__block">
+            <b class="contacts__lead-text">приглашаем<br> к сотрудничеству дилеров!</b>
+            <p class="contacts__adress"><span>ул. Большая Конюшенная, д. 19/8</span><span>Санкт-Петербург</span></p>
+          </div>
         </div>
         <div class="contacts__map" id="map"></div>
       </section>
