@@ -8,40 +8,43 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header class="page-header">
-      <div class="page-header__wrap">
-        <img class="page-header__logo-img" src="img/logo-mobile.svg" width="191" height="38" alt="логотип Кэт энерджи">
-      </div>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-        <!-- <div class="main-nav__wrapper"> -->
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--active"><a class="site-list__link">Главная</a></li>
-            <li class="site-list__item"><a class="site-list__link" href="catalog.html">Каталог продукции</a></li>
-            <li class="site-list__item"><a class="site-list__link" href="form.html">Подбор программы</a></li>
-          </ul>
-        <!-- </div> -->
+    <!-- header -->
+    <header class="page-header page-header--index">
+      <nav class="main-nav main-nav--open main-nav--nojs">
+        <div class="main-nav__wrap">
+          <a aria-label="логотип Кэт энерджи">
+            <img class="main-nav__logo-img" src="img/logo-mobile.svg" width="191" height="38" alt="логотип Кэт энерджи">
+          </a>
+          <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        </div>
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item site-list__item--active"><a class="site-list__link site-list__link--inverse">Главная</a></li>
+          <li class="site-list__item"><a class="site-list__link site-list__link--inverse" href="catalog.html">Каталог продукции</a></li>
+          <li class="site-list__item"><a class="site-list__link site-list__link--inverse" href="form.html">Подбор программы</a></li>
+        </ul>
       </nav>
     </header>
     <main class="page-main">
       <h1 class="visually-hidden">Интернет-магазин функционального питания для котов</h1>
+      <!-- promo -->
       <section class="promo">
-        <div class="promo__wrap">
+        <div class="promo__wrap container">
           <h2 class="promo__title title title--inverse">Функциональное питание для котов</h2>
           <b class="promo__lead-text">Занялся собой? Займись котом!</b>
           <a class="button promo__button button--accent">Подобрать программу</a>
           <img  class="promo__img" src="img/index-can-mobile@1x.png" alt="фото продукта" width="280" height="270">
         </div>
       </section>
-      <section class="program">
+      <!-- program -->
+      <section class="program container">
         <h2 class="visually-hidden">Программы</h2>
         <ul class="program__list">
-          <li class="program__item">
+          <li class="program__item program__item--weight-loss">
             <h3 class="program__title">Похудение</h3>
             <p class="program__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
             <a class="program__link" href="#" >Каталог Slim</a>
           </li>
-          <li class="program__item">
+          <li class="program__item program__item--weight-gain">
             <h3 class="program__title">Набор массы</h3>
             <p class="program__description">Заработать авторитет среди дворовых котов и даже собак?
                 Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
@@ -49,16 +52,18 @@
           </li>
         </ul>
       </section>
-      <section class="working">
+      <!-- working -->
+      <section class="working container">
         <h2 class="working__title title title--main">Как это работает</h2>
         <ul class="working__list">
-          <li class="working__item">Функциональное питание содержит только полезные питательные вещества.</li>
-          <li class="working__item">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</li>
-          <li class="working__item">Замените один-два приема обычной еды на наше функциональное питание.</li>
-          <li class="working__item">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</li>
+          <li class="working__item working__item--first">Функциональное питание содержит только полезные питательные вещества.</li>
+          <li class="working__item working__item--second">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</li>
+          <li class="working__item working__item--third">Замените один-два приема обычной еды на наше функциональное питание.</li>
+          <li class="working__item working__item--fouth">Уже через месяц наслаждайтесь изменениями к лучшему <br>вашего питомца!</li>
         </ul>
       </section>
-      <section class="stats">
+      <!-- stats-->
+      <section class="stats container">
         <div class="stats__block stats__block--left">
           <header class="stats__header">
             <h2 class="stats__title title title--main">Живой пример</h2>
@@ -82,42 +87,52 @@
         </div>
         <div class="stats__block stats__block--right preview">
           <div class="preview__wrap">
-            <img class="preview__img preview__img--before" src="#" alt="фото кота до" width="" height="">
-            <img class="preview__img preview__img--after" src="#" alt="фото кота после" width="" height="">
-            <fieldset class="priview__group range">
+            <div class="preview__img-wrap">
+              <img class="preview__img preview__img--before" src="#" alt="фото кота до" width="" height="">
+              <img class="preview__img preview__img--after" src="#" alt="фото кота после" width="" height="">
+            </div>
+            <fieldset class="preview__group range">
                 <p class="range__text range__text--before">Было</p>
-                <label  class="visually-hidden" for="range-input">Изменить изображение</label>
-                <input class="range__input" id="range-input" type="range">
-                <button class="range__button" type="button" aria-label="кнопка изменения изображения"></button>
+                <div class="range__input-wrap">
+                  <label  class="visually-hidden" for="range-input">Изменить изображение</label>
+                  <input class="range__input" id="range-input" type="range">
+                  <button class="range__button" type="button" aria-label="кнопка изменения изображения"></button>
+                </div>
                 <p class="range__text range__text--after">Стало</p>
             </fieldset>
           </div>
         </div>
       </section>
+      <!-- contacts -->
       <section class="contacts contacts--main">
         <h2 class="visually-hidden">Контакты</h2>
-        <div class="contacts__wrap">
-          <b class="contacts__lead-text">приглашаем к сотрудничеству дилеров!</b>
-          <p class="contacts__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
-        </div>
-        <div class="contacts__map"></div>
-      </section>
-      <footer class="page-footer">
-        <div class="page-footer__container">
-          <p class="page-footer__wrap">
-            <img class="page-footer__logo" src="img/logo-footer.svg" alt="логотип кэтЭнерджи" width="128" height="34">
-          </p>
-          <ul class="page-footer__social social">
-            <li class="social__item social__item--vk"><span class="visually-hidden">Вконтакте</span></li>
-            <li class="social__item social__item--instagram"><span class="visually-hidden">Инстаграмм</span></li>
-            <li class="social__item social__item--facebook"><span class="visually-hidden">Фейсбук</span></li>
-          </ul>
-          <div class="page-footer__developer developer">
-            <p class="developer__text">HTML Academy</p>
-            <img class="developer__logo" src="img/htmlacademy.svg" alt="логотип HTML Academy" width="27" height="34">
+        <div class="contacts__wrap container">
+          <div class="contacts__block">
+            <b class="contacts__lead-text">приглашаем<br> к сотрудничеству дилеров!</b>
+            <p class="contacts__adress"><span>ул. Большая Конюшенная, д. 19/8</span><span>Санкт-Петербург</span></p>
           </div>
         </div>
-      </footer>
+        <div class="contacts__map" id="map"></div>
+      </section>
     </main>
+    <!-- footer -->
+    <footer class="page-footer">
+      <div class="page-footer__container">
+        <p class="page-footer__wrap">
+          <img class="page-footer__logo" src="img/logo-footer.svg" alt="логотип кэтЭнерджи" width="128" height="34">
+        </p>
+        <ul class="page-footer__social social">
+          <li class="social__item social__item--vk"><span class="visually-hidden">Вконтакте</span></li>
+          <li class="social__item social__item--instagram"><span class="visually-hidden">Инстаграмм</span></li>
+          <li class="social__item social__item--facebook"><span class="visually-hidden">Фейсбук</span></li>
+        </ul>
+        <div class="page-footer__developer developer">
+          <p class="developer__text">HTML Academy</p>
+          <img class="developer__logo" src="img/htmlacademy.svg" alt="логотип HTML Academy" width="27" height="34">
+        </div>
+      </div>
+    </footer>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=<3e3d67cb-e68e-4bba-af9b-1404fe80264e>&amp;lang=ru_RU" type="text/javascript"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>

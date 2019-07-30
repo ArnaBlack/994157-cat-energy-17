@@ -1,52 +1,21 @@
 @import "../vars.scss";
 
 .page-header {
-  display: flex;
-  flex-direction: column;
-  background-color: $white;
-}
-
-.page-header__wrap {
-  padding: 11px 20px 16px;
-  border-bottom: 1px solid $border-color;
-}
-
-.page-header__logo-img {
-  height: 38px;
-}
-
-@media screen and (min-width: $tablet-width) {
-  .page-header {
-    width: 768px;
-    margin: 0 auto;
-    padding: 24px 10px;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .page-header__wrap {
-    border-bottom: none;
-  }
-
-  .page-header__logo-img {
-    /*временно для сетки*/
-    width: 173px;
-    height: 58px;
-  }
+  width: 100%;
+  min-height: 40px;
 }
 
 @media screen and (min-width: $desktop-width) {
   .page-header {
-    width: 1219px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: transparent;
-  }
+    padding: 0 90px;
+    margin: 0 auto;
 
-  .page-header__logo-img {
-    height: 59px;
+    &--index {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: transparent;
+    }
   }
 }

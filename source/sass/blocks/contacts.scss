@@ -1,9 +1,7 @@
 @import "../vars.scss";
 
 .contacts {
-  width: 320px;
-  margin: 0 auto;
-  padding: 30px 20px 25px;
+  width: 100%;
 
   &--main {
     background-color: $white;
@@ -14,13 +12,15 @@
   }
 }
 
-.contacts__wrap {
+.contacts__block {
+  padding-top: 28px;
+  padding-bottom: 26px;
   display: flex;
   justify-content: space-between;
 }
 
 .contacts__lead-text {
-  width: 123px;
+  width: 50%;
   display: inline-block;
   color: $dark-text;
   font-family: $Font;
@@ -31,49 +31,59 @@
 }
 
 .contacts__adress {
-  width: 135px;
+  width: 50%;
   margin: 0;
 }
 
-@media screen and (min-width: $tablet-width) {
-  .contacts {
-    width: 768px;
-    padding: 70px;
+.contacts__adress span {
+  display: block;
+  line-height: 20px;
+}
 
-    &--inverse {
-      background-color: $white;
-    }
+.contacts__map {
+  width: 100%;
+  height: 400px;
+}
+
+@media screen and (min-width: $tablet-width) {
+  .contacts__block {
+    padding: 66px 40px 40px;
   }
 
   .contacts__lead-text {
+    width: 160px;
     font-size: 20px;
     line-height: 25px;
   }
 
   .contacts__adress {
     width: 160px;
+    text-align: right;
+  }
+
+  .contacts__adress span:first-of-type {
+    margin-bottom: 19px;
   }
 }
 
 @media screen and (min-width: $desktop-width) {
   .contacts {
-    width: 100%;
-    padding: 0;
-    position: relative;
-    background: $white;
+    &--inverse {
+      background-color: $white;
+    }
   }
 
   .contacts__wrap {
+    position: relative;
+  }
+
+  .contacts__block {
     width: 570px;
     padding: 69px 90px 59px 76px;
     position: absolute;
-    left: 140px;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  .contacts__map {
-    width: 100%;
-    height: 430px;
+    left: 0;
+    top: 95px;
+    z-index: 3;
+    background-color: $white;
   }
 }

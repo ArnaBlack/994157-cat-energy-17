@@ -1,0 +1,50 @@
+@import "../vars.scss";
+
+.title-block {
+  padding-top: 14px;
+  padding-bottom: 28px;
+}
+
+.title-block__title {
+  margin-bottom: 27px;
+  line-height: 60px;
+}
+
+.title-block__description {
+  width: 85%;
+  margin: 0;
+  color: $dark-text;
+  font-family: $Font;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: $tablet-width) {
+  .title-block {
+    padding-top: 52px;
+    padding-bottom: 60px;
+  }
+
+  .title-block__title {
+    margin-bottom: 54px;
+  }
+
+  .title-block__description {
+    padding-left: 40px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .title-block {
+    padding-top: 69px;
+    padding-bottom: 64px;
+  }
+
+  .title-block__description {
+    padding: 0;
+  }
+}

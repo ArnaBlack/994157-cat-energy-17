@@ -1,0 +1,37 @@
+@import "../vars.scss";
+
+.input {
+  padding: 13px 15px;
+  box-sizing: border-box;
+  font: inherit;
+  text-transform: uppercase;
+  color: inherit;
+  border: 1px solid rgba($border-color, 50%);
+}
+
+.input::placeholder {
+  color: $light-text;
+}
+
+.input:hover {
+  border: 1px solid $border-color;
+}
+
+.input:focus {
+  border: 2px solid $light-text;
+  outline: none;
+}
+
+.input:focus::placeholder {
+  color: transparent;
+}
+
+.input:invalid:not(:placeholder-shown) {
+  border: 2px solid #ff8282;
+}
+
+@media screen and (min-width: $tablet-width) {
+  .input {
+    padding: 10px 18px;
+  }
+}

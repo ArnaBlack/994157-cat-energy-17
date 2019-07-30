@@ -1,8 +1,6 @@
 @import "../vars.scss";
 
 .site-list {
-  margin: 0;
-  padding: 0;
   list-style: none;
   text-align: center;
 }
@@ -19,6 +17,15 @@
   font-weight: 500;
   line-height: 20px;
   text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover {
+    color: $hoverTextColorDark;
+  }
+
+  &:active {
+    color: $activeTextColorDark;
+  }
 }
 
 @media screen and (min-width: $tablet-width) {
@@ -26,28 +33,56 @@
     width: 478px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   .site-list__item {
-    padding: 20px 15px;
+    padding: 20px 18px;
     border-bottom: none;
   }
 
   .site-list__link {
+    position: relative;
     font-size: 18px;
     line-height: 24.86px;
     font-weight: 400;
     color: #222222;
   }
+
+  .site-list__item--active .site-list__link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -9px;
+    width: 100%;
+    height: 2px;
+    background-color: $accent;
+  }
 }
 
 @media screen and (min-width: $desktop-width) {
   .site-list {
-    width: 517px;
+    width: 518px;
   }
 
   .site-list__link {
-    color: $white;
     font-size: 20px;
+    color: $dark-text;
+
+    &--inverse {
+      color: $white;
+
+      &:hover {
+        color: $hoverTextColorLight;
+      }
+
+      &:active {
+        color: $activeTextColorLight;
+      }
+    }
+  }
+
+  .site-list__item--active .site-list__link--inverse::after {
+    background-color: $white;
   }
 }

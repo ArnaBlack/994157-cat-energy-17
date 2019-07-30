@@ -1,82 +1,41 @@
-@import "fonts.scss";
-@import "vars.scss";
-
-html {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
-a {
-  text-decoration: none;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-body {
-  min-width: 320px;
-  margin: 0;
-  padding: 0;
-  font-family: "Arial", sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 18px;
-  color: $light-text;
-  background-color: #ffffff;
-}
-
-.visually-hidden:not(:focus):not(:active),
-input[type="checkbox"].visually-hidden,
-input[type="radio"].visually-hidden {
-  position: absolute;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  white-space: nowrap;
-  border: 0;
-  clip-path: inset(100%);
-}
-
-@media screen and (min-width: $tablet-width) {
-  body {
-    font-size: 16px;
-  }
-}
-
+// basestyles
+@import "scaffolding.scss";
 @import "blocks/button.scss";
+@import "blocks/input.scss";
+@import "blocks/input-block.scss";
+@import "blocks/container.scss";
 @import "blocks/title.scss";
+// header
 @import "blocks/page-header.scss";
 @import "blocks/main-nav.scss";
 @import "blocks/site-list.scss";
+// promo
 @import "blocks/promo.scss";
+// program
 @import "blocks/program.scss";
+// working
 @import "blocks/working.scss";
-@import "blocks/range.scss";
+// stats
 @import "blocks/stats.scss";
+@import "blocks/preview.scss";
+@import "blocks/range.scss";
+//catalog
 @import "blocks/catalog.scss";
 @import "blocks/products.scss";
 @import "blocks/show-more.scss";
+//additional-products
 @import "blocks/additional-products.scss";
 @import "blocks/add-products.scss";
 @import "blocks/gift.scss";
+// title-block
+@import "blocks/title-block.scss";
+// selection
 @import "blocks/selection.scss";
 @import "blocks/form.scss";
-@import "blocks/pet-char.scss";
 @import "blocks/options.scss";
-@import "blocks/comment.scss";
-@import "blocks/social.scss";
-@import "blocks/user-contacts.scss";
+// contacts
 @import "blocks/contacts.scss";
-@import "blocks/developer.scss";
+// footer
 @import "blocks/page-footer.scss";
+@import "blocks/social.scss";
+@import "blocks/developer.scss";
