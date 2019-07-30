@@ -40,7 +40,7 @@
 
   .working__item {
     width: 245px;
-    padding: 114px 0px 50px 0;
+    padding: 114px 0 50px 0;
     margin-bottom: 81px;
 
     &::after {
@@ -61,15 +61,15 @@
       content: "1";
     }
 
-    &--second::after  {
+    &--second::after {
       content: "2";
     }
 
-    &--third::after  {
+    &--third::after {
       content: "3";
     }
 
-    &--fouth::after  {
+    &--fouth::after {
       content: "4";
     }
 
