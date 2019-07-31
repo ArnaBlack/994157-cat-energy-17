@@ -14,3 +14,10 @@
     padding-top: 25px;
   }
 }
+
+
+@media screen and (min-width: $desktop-width) {
+  .catalog {
+    padding-top: 41px;
+  }
+}

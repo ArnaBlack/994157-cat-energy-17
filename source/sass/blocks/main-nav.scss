@@ -9,6 +9,7 @@
 }
 
 .main-nav__logo-img {
+  width: 191px;
   height: 38px;
 }
 
@@ -100,7 +101,6 @@
   }
 
   .main-nav__logo-img {
-    /*временно для сетки*/
     width: 173px;
     height: 58px;
   }
@@ -108,10 +108,12 @@
 
 @media screen and (min-width: $desktop-width) {
   .main-nav {
-    padding-top: 54px;
+    padding: 0;
+    padding-top: 53px;
   }
 
   .main-nav__logo-img {
+    width: 202px;
     height: 59px;
   }
 }
