@@ -2,18 +2,32 @@
 
 .promo {
   width: 100%;
-  background-image: url("../img/index-background-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-position: top;
-  background-size: contain;
+  position: relative;
   text-align: center;
 
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/index-background-mobile@2x.jpg");
+  &::after {
+    content: "";
+    width: 100%;
+    height: 305px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    // left: 50%;
+    // transform: translateX(-50%);
+    z-index: -1;
+    background-color: #63a73a;
+    background-image: url("../img/index-background-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/index-background-mobile@2x.jpg");
+    }
   }
 }
-
-
 
 .promo__wrap {
   padding-top: 30px;
@@ -51,8 +65,12 @@
 
 @media screen and (min-width: $tablet-width) {
   .promo {
-    background-image: none;
+    // background-image: none;
     text-align: left;
+
+    &::after {
+      display: none;
+    }
   }
 
   .promo__wrap {
@@ -95,16 +113,25 @@
   .promo {
     margin: 0;
     padding: 142px 0 57px;
-    background: url("../img/index-background-desktop@1x.jpg") no-repeat top right, linear-gradient(90deg, #FFFFFF 50%, #65A93C 32%) no-repeat 50% 50% / 100% 100%;
+    background: linear-gradient(90deg, #FFFFFF 50%, #65A93C 32%) no-repeat 50% 50% / 100% 100%;
 
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background: url("../img/index-background-desktop@2x.jpg") no-repeat top right, linear-gradient(90deg, #FFFFFF 50%, #65A93C 32%) no-repeat 50% 50% / 100% 100%;
-      background-size: contain;
+    &::after {
+      width: 720px;
+      height: 696px;
+      left: auto;
+      right: 0;
+      z-index: 0;
+      display: block;
+      background-image: url("../img/index-background-desktop@1x.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/index-background-desktop@2x.jpg");
+      }
     }
   }
 
   .promo__wrap {
-    padding:  81px 110px 133px;
+    padding: 81px 110px 133px;
   }
 
   .promo__lead-text {

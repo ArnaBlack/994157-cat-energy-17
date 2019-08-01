@@ -34,7 +34,7 @@ function init() {
     {
       iconLayout: "default#image", //название
       iconImageHref: "img/map-pin.png", //источник
-      iconImageSize: [113, 106], //размер
+      iconImageSize: [124, 106], //размер
       iconImageOffset: [-60, -106] //координаты смещения
     });
   map.geoObjects.add(placemark);
