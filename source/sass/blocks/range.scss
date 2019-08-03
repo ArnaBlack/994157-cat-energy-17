@@ -1,11 +1,13 @@
 @import "../vars.scss";
 
 .range {
-  width: 197px;
+  width: 219px;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.range__text {
+.range__button {
   margin: 0;
   color: $dark-text;
   font-family: $Font;
@@ -13,4 +15,86 @@
   font-weight: 400;
   line-height: 20px;
   text-transform: uppercase;
+  background-color: transparent;
 }
+
+.range__progress-bar {
+  width: 84px;
+  height: 14px;
+  padding: 3px 5px;
+  border: 1px solid #cdcdcd;
+  border-radius: 10px;
+  background-color: $white;
+}
+
+.range__button-toggle {
+  width: 50%;
+  height: 6px;
+  padding: 0;
+  border-radius: 10px;
+  background-color: $accent;
+}
+
+@media screen and (min-width: $tablet-width) {
+  .range {
+    width: 569px;
+  }
+
+  .range__button {
+    font-size: 20px;
+    line-height: 20px;
+    width: auto;
+    padding: 7px 0;
+    border-bottom: 1px dotted #bebebe;
+    outline: 0;
+
+    &:hover {
+      border-bottom-style: solid;
+    }
+
+    &:active {
+      border-bottom: none;
+    }
+  }
+
+  .range__progress-bar {
+    width: 428px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border: none;
+    background-color: transparent;
+  }
+
+  .range__scale {
+    width: 100%;
+    height: 6px;
+    border-radius: 3px;
+    background-color: #dcdcdc;
+  }
+
+  .range__button-toggle {
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $accent;
+    border: 13px solid $white;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px #cdcdcd, 0 2px 5px rgba(0, 0, 0, 0.15);
+    box-sizing: content-box;
+    cursor: pointer;
+  }
+
+  .range__button-toggle:hover {
+    box-shadow: 0 0 0 1px #cdcdcd, 0 3px 5px rgba(0, 0, 0, 0.25);
+  }
+
+  .range__button-toggle:active {
+    box-shadow: 0 0 0 2px $accent, 0 4px 5px rgba(0, 0, 0, 0.3);
+  }
+}
+

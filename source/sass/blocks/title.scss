@@ -5,7 +5,7 @@
   font-family: $Font;
   font-size: 36px;
   font-weight: 400;
-  line-height: 36px;
+  line-height: 60px;
 
   &--main {
     color: $dark-text;
@@ -13,6 +13,7 @@
 
   &--inverse {
     color: $white;
+    line-height: 36px;
   }
 
   &--accent {
@@ -41,7 +42,6 @@
 @media screen and (min-width: $tablet-width) {
   .title {
     font-size: 60px;
-    line-height: 60px;
     color: $dark-text;
 
     &--accent {
@@ -53,6 +53,10 @@
       padding-right: 40px;
       font-size: 36px;
       line-height: 36px;
+    }
+
+    &--inverse {
+      line-height: 60px;
     }
   }
 }

@@ -30,8 +30,8 @@
 }
 
 .promo__wrap {
-  padding-top: 30px;
-  padding-bottom: 23px;
+  padding-top: 28px;
+  padding-bottom: 22px;
   display: flex;
   flex-direction: column;
 }
@@ -60,12 +60,14 @@
 }
 
 .promo__button {
+  padding-bottom: 12px;
   order: 2;
+  font-size: 14px;
+  line-height: 18px;
 }
 
 @media screen and (min-width: $tablet-width) {
   .promo {
-    // background-image: none;
     text-align: left;
 
     &::after {
@@ -75,8 +77,8 @@
 
   .promo__wrap {
     padding-top: 52px;
-    padding-left: 88px;
-    padding-bottom: 529px;
+    padding-left: 118px;
+    padding-bottom: 528px;
     position: relative;
   }
 
@@ -92,7 +94,7 @@
     height: 609px;
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: 30px;
     z-index: -1;
   }
 
@@ -106,6 +108,9 @@
 
   .promo__button {
     width: 245px;
+    padding-bottom: 18px;
+    font-size: 20px;
+    line-height: 20px;
   }
 }
 
