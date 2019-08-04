@@ -13,8 +13,9 @@
   color: $light-text;
 }
 
-.input:not[value=""]:invalid {
-  border-color: #ff8282;
+.input:invalid {
+  box-shadow: 0 0 0 2px #ff8282;
+  outline: none;
 }
 
 .input:hover {
@@ -22,7 +23,7 @@
 }
 
 .input:focus {
-  border: 2px solid $light-text;
+  box-shadow: 0 0 0 2px $light-text;
   outline: none;
 }
 
@@ -30,9 +31,9 @@
   color: transparent;
 }
 
-.input:invalid:not(:placeholder-shown) {
-  border: 2px solid #ff8282;
-}
+// .input:invalid:not(:placeholder-shown) {
+//   border: 2px solid #ff8282;
+// }
 
 @media screen and (min-width: $tablet-width) {
   .input {
