@@ -13,6 +13,10 @@
   color: $light-text;
 }
 
+.input:not[value=""]:invalid {
+  border-color: #ff8282;
+}
+
 .input:hover {
   border: 1px solid $border-color;
 }

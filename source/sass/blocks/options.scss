@@ -42,6 +42,18 @@
   border-radius: 50%;
 }
 
+.options__input--checkbox:checked + .options__label::after {
+  content: "";
+  width: 12px;
+  height: 21px;
+  position: absolute;
+  top: 0;
+  left: 9px;
+  transform: rotate(45deg);
+  border-right: 1px solid $accent;
+  border-bottom: 1px solid $accent;
+}
+
 
 @media screen and (min-width: $tablet-width) {
   .options__list--checkbox {
@@ -61,7 +73,7 @@
   }
 
   .options__label {
-    padding-left: 60px;
+    padding-left: 58px;
     padding-top: 9px;
     padding-bottom: 9px;
   }
@@ -82,5 +94,9 @@
 @media screen and (min-width: $desktop-width) {
   .options__list--checkbox {
     flex-wrap: nowrap;
+  }
+
+  .options__item--checkbox {
+    width: 20%;
   }
 }

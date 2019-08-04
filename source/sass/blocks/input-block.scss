@@ -3,6 +3,7 @@
 .input-block {
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .input-block__label {
@@ -18,16 +19,56 @@
 .input-block__input {
   width: 100%;
   flex-grow: 1;
+
+  &--email {
+    padding-right: 36px;
+    margin-left: -4px;
+  }
+
+  &--phone {
+    padding-right: 36px;
+    margin-left: -6px;
+  }
+}
+
+.input-block__icon {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  &--phone {
+    width: 20px;
+    height: 20px;
+  }
+
+  &--email {
+    width: 17px;
+    height: 13px;
+  }
 }
 
 @media screen and (min-width: $tablet-width) {
   .input-block__label {
     margin-right: 18px;
   }
+
+  .input-block__input {
+    &--email {
+      margin-left: 4px;
+    }
+
+    &--phone {
+      margin-left: -4px;
+    }
+  }
+  .input-block__icon {
+    right: 19px;
+  }
 }
 
 @media screen and (min-width: $desktop-width) {
   .input-block {
-    width: 568px;
+    width: 570px;
   }
 }

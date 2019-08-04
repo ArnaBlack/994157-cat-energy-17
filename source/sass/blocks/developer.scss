@@ -1,11 +1,16 @@
 @import "../vars.scss";
-
 .developer {
-  width: 100%;
-  padding: 22px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  transition: opacity 0.3s ease;
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &:active .developer__icon,
+  &:hover .developer__icon,
+  &:focus .developer__icon {
+    fill: $accent;
+  }
 }
 
 .developer__text {
@@ -17,11 +22,8 @@
 }
 
 .developer__icon {
+  transition: fill 0.3s ease;
   fill: #666666;
 }
 
-@media screen and (min-width: $tablet-width) {
-  .developer {
-    width: 162px;
-  }
-}
+

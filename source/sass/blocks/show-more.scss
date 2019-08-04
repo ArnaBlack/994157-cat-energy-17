@@ -2,10 +2,30 @@
 
 .show-more {
   padding-top: 80px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  position: relative;
   border-bottom: 1px solid $border-color;
+
+  &::before,
+  &::after {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #d3d3d3;
+    content: "";
+  }
+
+  &::before {
+    width: 30px;
+    height: 2px;
+    top: 40px;
+  }
+
+  &::after {
+    width: 2px;
+    height: 30px;
+    top: 26px;
+  }
 }
 
 .show-more__text-top {
@@ -27,25 +47,48 @@
   line-height: 16px;
 }
 
+.show-more__button {
+  width: 100%;
+}
+
 @media screen and (min-width: $tablet-width) {
   .show-more {
-    padding-top: 163px;
+    padding-top: 162px;
     align-self: flex-end;
     background-color: $white;
     background-image: none;
     border: 1px solid $border-color;
     text-align: center;
+
+    &::before {
+      width: 60px;
+      height: 2px;
+      top: 83px;
+    }
+
+    &::after {
+      width: 2px;
+      height: 60px;
+      top: 55px;
+    }
   }
 
   .show-more__text-top {
     width: 160px;
-    margin-bottom: 29px;
+    margin-bottom: 24px;
     font-size: 20px;
   }
 
   .show-more__text-bottom {
     width: 167px;
     margin-bottom: 85px;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  .show-more__button {
+    padding-top: 11px;
+    padding-bottom: 9px;
     font-size: 16px;
   }
 }

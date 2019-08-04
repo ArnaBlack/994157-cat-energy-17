@@ -21,7 +21,7 @@
     background-image: url("../img/index-background-mobile@1x.jpg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/index-background-mobile@2x.jpg");
@@ -117,11 +117,11 @@
 @media screen and (min-width: $desktop-width) {
   .promo {
     margin: 0;
-    padding: 142px 0 57px;
+    padding: 142px 0 53px;
     background: linear-gradient(90deg, #FFFFFF 50%, #65A93C 32%) no-repeat 50% 50% / 100% 100%;
 
     &::after {
-      width: 720px;
+      width: 50%;
       height: 696px;
       left: auto;
       right: 0;

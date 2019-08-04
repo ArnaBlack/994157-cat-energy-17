@@ -128,23 +128,27 @@
     }
   }
 
+  .working__item br {
+    display: inline-block;
+  }
+
   .working__title {
     margin-bottom: 71px;
   }
 }
 
-@media screen and (min-width: $tablet-width) and (max-width: $tablet-width-only) {
-  .working__item br {
-    display: inline-block;
-  }
-}
-
 @media screen and (min-width: $desktop-width) {
+  .working {
+    padding-bottom: 0;
+  }
+
   .working__list {
     padding-right: 0;
   }
 
-  .working__item {
+  .working__item,
+  .working__item:nth-last-child(2),
+  .working__item:last-child {
     margin-bottom: 0;
   }
 

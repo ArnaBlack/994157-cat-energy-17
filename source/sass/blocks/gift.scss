@@ -1,7 +1,10 @@
 @import "../vars.scss";
 
 .gift {
-  padding: 186px 55px 43px;
+  padding: 65px 55px 42px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
   background-color: $accent;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
@@ -15,19 +18,25 @@
 }
 
 .gift__lead-text {
+  display: inline-block;
+  margin-top: 62px;
   color: $white;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
 }
 
+.gift__icon {
+  fill: $white;
+  width: 55px;
+  height: 60px;
+}
+
 @media screen and (min-width: $tablet-width) {
   .gift {
-    padding: 65px 110px 68px 91px;
-    display: flex;
-    // justify-content: space-between;
-    justify-content: flex-end;
-    align-items: center;
+    padding: 60px 125px 70px 91px;
+    flex-direction: row;
+    justify-content: space-between;
     background-image: url("../img/gift-photo-tablet@1x.jpg");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -36,17 +45,17 @@
   }
 
   .gift__lead-text {
-    display: block;
     text-align: left;
-    width: 175px;
-    margin: 7px 0 0;
+    width: 161px;
+    margin: 10px 0 0;
   }
 }
 
 @media screen and (min-width: $desktop-width) {
   .gift {
     width: 245px;
-    padding: 65px 43px 43px;
+    padding: 66px 43px 42px;
+    flex-direction: column;
     background-image: url("../img/gift-photo-desktop@1x.jpg");
     background-size: cover;
 

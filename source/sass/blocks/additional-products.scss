@@ -3,6 +3,7 @@
 .additional-products {
   padding-bottom: 35px;
   padding-top: 8px;
+  overflow-x: hidden;
 }
 
 .additional-products__list {
@@ -10,22 +11,22 @@
 }
 
 .additional-products__title {
-  max-width: 250px;
   margin-bottom: 12px;
+  margin-left: -32px;
+
+  & span {
+    padding-right: 36px;
+  }
 }
 
 @media screen and (min-width: $tablet-width) {
   .additional-products {
-    padding-top: 0;
     padding-bottom: 76px;
     margin-top: -17px;
   }
 
   .additional-products__title {
-    margin-right: 0;
-    margin-left: 0;
-    margin-bottom: 59px;
-    max-width: 100%;
+    margin-bottom: 56px;
   }
 
   .additional-products__list {
@@ -34,8 +35,16 @@
 }
 
 @media screen and (min-width: $desktop-width) {
+  .additional-products {
+    padding-top: 13px;
+    padding-bottom: 85px;
+  }
+
+  .additional-products__title {
+    margin-bottom: 59px;
+  }
+
   .additional-products__list {
-    padding: 5px 0;
     margin-bottom: 0;
   }
 

@@ -17,25 +17,31 @@
   }
 
   &--accent {
-    max-width: 225px;
-    padding: 20px 24px 20px 0;
-    margin-bottom: 14px;
+    width: 100%;
+    margin-right: -20px;
+    margin-left: -20px;
     position: relative;
     color: $dark-text;
     font-size: 24px;
     line-height: 24px;
     text-transform: none;
 
-    // &::after {
-    //   content: "";
-    //   z-index: -1;
-    //   width: 100%;
-    //   height: 3px;
-    //   position: absolute;
-    //   top: 34px;
-    //   left: 100%;
-    //   background-color: $accent;
-    // }
+    &::after {
+      content: "";
+      z-index: -1;
+      width: 400%;
+      height: 3px;
+      position: absolute;
+      top: 34px;
+      left: -200%;
+      background-color: $accent;
+    }
+
+    & span {
+      padding: 20px;
+      display: inline-block;
+      background-color: $white;
+    }
   }
 }
 
@@ -45,14 +51,20 @@
     color: $dark-text;
 
     &--accent {
-      max-width: 100%;
-      margin-left: -40px;
-      margin-right: -40px;
-      margin-bottom: 0;
-      padding-left: 40px;
-      padding-right: 40px;
+      margin-left: -70px;
+      padding-left: 29px;
       font-size: 36px;
       line-height: 36px;
+
+      &::after {
+        top: 41px;
+      }
+
+      & span {
+        // margin: 0 30px;
+        padding-left: 40px;
+        padding-right: 40px;
+      }
     }
 
     &--inverse {
@@ -63,6 +75,7 @@
 
 @media screen and (min-width: $desktop-width) {
   .title--accent {
-    width: 100%;
+    padding: 0;
+    margin-left: -41px;
   }
 }

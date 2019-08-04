@@ -1,6 +1,7 @@
 @import "../vars.scss";
 
 .preview__wrap {
+  max-width: 677px;
   margin: 0 auto;
 }
 
@@ -46,12 +47,11 @@
 
 @media screen and (min-width: $tablet-width) {
   .preview {
-    margin-right: -30px;
-    margin-left: -30px;
-    padding-bottom: 57px;
+    padding-bottom: 67px;
   }
 
   .preview__slider {
+    margin-bottom: 13px;
     position: relative;
     display: flex;
   }
@@ -63,7 +63,7 @@
 
     &--before {
       background-image: url("../img/before-tablet@1x.png");
-      background-position-x: 47px;
+      background-position-x: 1px;
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
         background-image: url("../img/before-tablet@2x.png");
@@ -72,7 +72,7 @@
 
     &--after {
       background-image: url("../img/after-tablet@1x.png");
-      background-position-x: 110%;
+      background-position-x: 96%;
 
       @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
         background-image: url("../img/after-tablet@2x.png");
@@ -86,5 +86,28 @@
 
   .preview__range-group {
     position: relative;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .preview__slider {
+    margin-bottom: 30px;
+  }
+
+  .preview__range-group {
+    margin: 0;
+    margin-left: auto;
+  }
+
+  .preview__slide {
+    &--before {
+      width: 58%;
+      background-position-x: 27px;
+    }
+
+    &--after {
+      width: 42%;
+      background-position-x: 90%;
+    }
   }
 }

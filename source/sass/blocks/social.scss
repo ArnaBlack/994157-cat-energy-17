@@ -1,17 +1,53 @@
 @import "../vars.scss";
 
 .social {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   list-style: none;
 }
 
 .social__item {
   width: 55px;
-  text-align: center;
+}
+
+.social__link {
+  display: flex;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+
+  &:active .social__icon {
+    fill: $accent;
+    opacity: 0.3;
+  }
+
+  &:hover .social__icon,
+  &:focus .social__icon {
+    fill: $accent;
+  }
 }
 
 .social__icon {
   fill:  #666666;
+  transition: fill 0.3s ease;
+}
+
+@media screen and (min-width: $tablet-width) {
+  .social__item {
+    width: 50px;
+  }
+
+  .social__icon {
+    &--vk {
+      width: 30px;
+      height: 16px;
+    }
+
+    &--insta {
+      width: 23px;
+      height: 23px;
+    }
+
+    &--fb {
+      width: 14px;
+      height: 28px;
+    }
+  }
 }

@@ -1,19 +1,19 @@
 @import "../vars.scss";
 
 .catalog__title {
-  padding-top: 26px;
-  padding-bottom: 40px;
+  padding-top: 16px;
+  padding-bottom: 28px;
 }
 
 @media screen and (min-width: $tablet-width) {
   .catalog {
-    padding-top: 25px;
+    padding-top: 35px;
   }
 }
 
 
 @media screen and (min-width: $desktop-width) {
   .catalog {
-    padding-top: 41px;
+    padding-top: 51px;
   }
 }
