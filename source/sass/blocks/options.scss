@@ -27,6 +27,15 @@
   border: 1px solid $border-color;
 }
 
+.options__input:hover + .options__label::before,
+.options__input:focus + .options__label::before {
+  border-color: #bababa;
+}
+
+.options__input:active + .options__label {
+  opacity: 0.3;
+}
+
 .options__input--radio + .options__label::before {
   border-radius: 50%;
 }
