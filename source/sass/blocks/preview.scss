@@ -1,10 +1,113 @@
 @import "../vars.scss";
 
-.preview__img-wrap {
-  margin-bottom: 35px;
+.preview__wrap {
+  max-width: 677px;
+  margin: 0 auto;
 }
 
-.preview__group {
-  margin: 0;
+.preview__slider {
+  margin-bottom: 23px;
+}
+
+.preview__slide {
+  display: none;
+  height: 240px;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-size: cover;
+  }
+
+  &--before {
+    background-image: url("../img/before-mobile@1x.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/before-mobile@2x.png");
+    }
+  }
+
+  &--after {
+    background-image: url("../img/after-mobile@1x.png");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/after-mobile@2x.png");
+    }
+  }
+
+  &--active {
+    display: block;
+  }
+}
+
+.preview__range-group {
+  margin: 0 auto;
   padding: 0;
+}
+
+@media screen and (min-width: $tablet-width) {
+  .preview {
+    padding-bottom: 67px;
+  }
+
+  .preview__slider {
+    margin-bottom: 13px;
+    position: relative;
+    display: flex;
+  }
+
+  .preview__slide {
+    display: block;
+    width: 50%;
+    height: 517px;
+
+    &--before {
+      background-image: url("../img/before-tablet@1x.png");
+      background-position-x: 1px;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/before-tablet@2x.png");
+      }
+    }
+
+    &--after {
+      background-image: url("../img/after-tablet@1x.png");
+      background-position-x: 96%;
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/after-tablet@2x.png");
+      }
+    }
+  }
+
+  .preview__img-wrap {
+    margin: 0;
+  }
+
+  .preview__range-group {
+    position: relative;
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .preview__slider {
+    margin-bottom: 30px;
+  }
+
+  .preview__range-group {
+    margin: 0;
+    margin-left: auto;
+  }
+
+  .preview__slide {
+    &--before {
+      width: 58%;
+      background-position-x: 27px;
+    }
+
+    &--after {
+      width: 42%;
+      background-position-x: 90%;
+    }
+  }
 }

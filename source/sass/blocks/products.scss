@@ -16,7 +16,7 @@
 
 .products__preview {
   width: 140px;
-  height: 144px;
+  height: 140px;
 }
 
 .products__desc {
@@ -34,7 +34,7 @@
 }
 
 .products__row {
-  padding: 1px 0;
+  padding: 2px 0;
   display: flex;
   justify-content: space-between;
 }
@@ -46,7 +46,7 @@
 .products__caption {
   width: 100px;
   margin-top: 21px;
-  margin-bottom: 16px;
+  margin-bottom: 15px;
   text-align: left;
   font-family: $Font;
   font-size: 16px;
@@ -56,13 +56,17 @@
   color: $dark-text;
 }
 
+.products__caption a {
+  color: $dark-text;
+}
+
 .products__button {
   width: 100%;
 }
 
 @media screen and (min-width: $tablet-width) {
   .products {
-    padding-top: 48px;
+    padding-top: 56px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -72,35 +76,48 @@
     width: 324px;
     padding: 0 37px 40px;
     margin: 0;
-    margin-bottom: 63px;
+    margin-bottom: 59px;
     justify-content: center;
     border: none;
-    background-image: linear-gradient(to bottom, transparent 0, transparent 77px, #f2f2f2 77px, #f2f2f2 100%);
+    background-image: linear-gradient(to bottom, transparent 0, transparent 81px, #f2f2f2 81px, #f2f2f2 100%);
+  }
+
+  .products__picture--small {
+    display: block;
+    margin-top: 33px;
   }
 
   .products__preview {
-    // временно для сетки
-    width: 195px;
-    height: 208px;
+    object-fit: cover;
+
+    &--small {
+      width: 163px;
+      height: 174px;
+    }
+
+    &--big {
+      width: 195px;
+      height: 208px;
+    }
   }
 
   .products__desc {
     width: 100%;
-    margin-bottom: 34px;
+    margin-bottom: 33px;
     align-items: center;
     font-size: 16px;
   }
 
   .products__caption {
     width: 150px;
-    margin: 34px 0 19px;
+    margin: 29px 0 19px;
     font-size: 20px;
     text-align: center;
   }
 
   .products__row {
-    padding-top: 8px;
-    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 9px;
     border-bottom: 1px solid #cdcdcd;
   }
 
@@ -114,5 +131,9 @@
 @media screen and (min-width: $desktop-width) {
   .products__item {
     width: 245px;
+  }
+
+  .products__picture--small {
+    margin-top: 36px;
   }
 }

@@ -1,18 +1,21 @@
 @import "../vars.scss";
 
 .stats {
-  width: 100%;
-  padding-top: 29px;
-  padding-bottom: 39px;
+  padding-bottom: 26px;
   background-color: $light-bg;
 }
 
 .stats__title {
-  margin-bottom: 35px;
+  margin-top: 17px;
+  margin-bottom: 23px;
+}
+
+.stats__block--left {
+  margin-bottom: 33px;
 }
 
 .stats__header {
-  margin-bottom: 21px;
+  margin-bottom: 22px;
 }
 
 .stats__text {
@@ -49,7 +52,7 @@
   line-height: 24px;
   text-transform: uppercase;
   border-radius: 3px;
-  border: 1px solid $border-color;
+  border: 1px solid #cdcdcd;
 }
 
 .stats__desc {
@@ -66,7 +69,6 @@
 
 .stats__total {
   margin: 0;
-  margin-bottom: 44px;
   color: $dark-text;
   font-family: $Font;
   font-size: 14px;
@@ -78,8 +80,7 @@
 
 @media screen and (min-width: $tablet-width) {
   .stats {
-    padding-top: 44px;
-    padding-bottom: 44px;
+    padding-bottom: 0;
     background-color: $white;
     border-top: 1px solid $border-color;
   }
@@ -88,12 +89,13 @@
     margin-bottom: 50px;
   }
 
-  .stats__wrap {
+  .stats__block-wrap {
     display: flex;
     justify-content: space-between;
   }
 
   .stats__title {
+    margin-top: 44px;
     margin-bottom: 64px;
   }
 
@@ -134,25 +136,73 @@
     line-height: 26px;
     text-align: right;
   }
+
+  .stats__block {
+    z-index: 1;
+
+    &--left {
+      margin-bottom: 57px;
+    }
+
+    &--right {
+      margin-right: -30px;
+      margin-left: -30px;
+      position: relative;
+
+      &::before {
+        width: 100%;
+        height: 460px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to right, #f2f2f2 50%, #eaeaea 50%) no-repeat 50% 50% / 100% 100%;
+        z-index: 0;
+        content: "";
+      }
+    }
+  }
 }
 
 @media screen and (min-width: $desktop-width) {
   .stats {
-    padding-top: 76px;
+    position: relative;
+    padding-top: 20px;
+    border: none;
+
+
+    &::before {
+      width: 100%;
+      height: 460px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to right, #f2f2f2 50%, #eaeaea 50%) no-repeat 50% 50% / 100% 100%;
+      z-index: 0;
+      content: "";
+    }
+  }
+
+  .stats__wrapper {
     display: flex;
     justify-content: space-between;
-    border: none;
   }
 
   .stats__block {
     width: 431px;
 
     &--right {
+      margin: 0;
       width: 677px;
+
+      &::before {
+        background-image: linear-gradient(to right, #f2f2f2 58%, #eaeaea 50%);
+      }
     }
   }
 
-  .stats__wrap {
+  .stats__block-wrap {
     flex-wrap: wrap;
   }
 
@@ -161,6 +211,7 @@
   }
 
   .stats__title {
+    margin-top: 55px;
     margin-bottom: 145px;
   }
 
@@ -171,6 +222,10 @@
   .stats__list {
     width: 366px;
     margin-bottom: 30px;
+  }
+
+  .stats__desc {
+    background-color: $light-bg;
   }
 
   .stats__total {

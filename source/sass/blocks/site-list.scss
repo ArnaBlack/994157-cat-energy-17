@@ -19,7 +19,8 @@
   text-transform: uppercase;
   cursor: pointer;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: $hoverTextColorDark;
   }
 
@@ -68,11 +69,13 @@
   .site-list__link {
     font-size: 20px;
     color: $dark-text;
+    transition: color 0.3s ease;
 
     &--inverse {
       color: $white;
 
-      &:hover {
+      &:hover,
+      &:focus {
         color: $hoverTextColorLight;
       }
 
