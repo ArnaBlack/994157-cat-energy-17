@@ -36,6 +36,7 @@
   right: 14px;
   top: 50%;
   transform: translateY(-50%);
+  fill: #222222;
 
   &--phone {
     width: 20px;
@@ -46,6 +47,14 @@
     width: 17px;
     height: 13px;
   }
+}
+
+.input-block__input:not(:focus):invalid + .input-block__icon {
+  fill: $invalidColor;
+}
+
+.input-block__input:focus + .input-block__icon {
+  fill: $accent;
 }
 
 @media screen and (min-width: $tablet-width) {

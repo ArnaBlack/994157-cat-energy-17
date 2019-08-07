@@ -14,7 +14,7 @@
 }
 
 .input:invalid {
-  box-shadow: 0 0 0 2px #ff8282;
+  box-shadow: 0 0 0 2px $invalidColor;
   outline: none;
 }
 
@@ -31,9 +31,9 @@
   color: transparent;
 }
 
-// .input:invalid:not(:placeholder-shown) {
-//   border: 2px solid #ff8282;
-// }
+.input:not(:focus):invalid {
+  box-shadow: 0 0 0 2px #ff8282;
+}
 
 @media screen and (min-width: $tablet-width) {
   .input {

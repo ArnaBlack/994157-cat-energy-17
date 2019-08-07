@@ -24,7 +24,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  border: 1px solid $border-color;
+  border: 1px solid #cdcdcd;;
+  transition: opacity 0.3s ease, border-color 0.3s ease;
 }
 
 .options__input:hover + .options__label::before,
@@ -54,15 +55,14 @@
 .options__input--checkbox:checked + .options__label::after {
   content: "";
   width: 12px;
-  height: 21px;
+  height: 20px;
   position: absolute;
-  top: 0;
+  top: 2px;
   left: 9px;
   transform: rotate(45deg);
-  border-right: 1px solid $accent;
-  border-bottom: 1px solid $accent;
+  border-right: 2px solid $accent;
+  border-bottom: 2px solid $accent;
 }
-
 
 @media screen and (min-width: $tablet-width) {
   .options__list--checkbox {
@@ -97,6 +97,12 @@
     height: 18px;
     left: 11px;
     top: 11px;
+  }
+
+  .options__input--checkbox:checked + .options__label::after {
+    top: 6px;
+    left: 14px;
+
   }
 }
 
