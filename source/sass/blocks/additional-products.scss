@@ -13,9 +13,14 @@
 .additional-products__title {
   margin-bottom: 12px;
   margin-left: -32px;
+}
 
-  & span {
-    padding-right: 36px;
+@media screen and (max-width: $mobile-width-only) {
+  .additional-products__title {
+    & span {
+      padding-right: 24px;
+      padding-left: 29px;
+    }
   }
 }
 
@@ -26,11 +31,11 @@
   }
 
   .additional-products__title {
-    margin-bottom: 56px;
+    margin-bottom: 58px;
   }
 
   .additional-products__list {
-    margin-bottom: 67px;
+    margin-bottom: 70px;
   }
 }
 
@@ -41,7 +46,11 @@
   }
 
   .additional-products__title {
-    margin-bottom: 59px;
+    margin-bottom: 61px;
+  }
+
+  .additional-products__title span {
+    padding-left: 32px;
   }
 
   .additional-products__list {

@@ -2,12 +2,19 @@
 
 .add-products {
   width: 100%;
+  display: flex;
+}
+
+.add-products tbody {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .add-products__item {
   padding: 14px 0 17px;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   border-top: 1px solid $border-color;
 
   &:last-child {
@@ -20,7 +27,6 @@
 }
 
 .add-products__title {
-  width: 100%;
   margin-bottom: 10px;
   color: #222222;
   font-family: $Font;
@@ -31,7 +37,6 @@
 }
 
 .add-products__options {
-  width: 100%;
   margin-bottom: 13px;
   display: flex;
   justify-content: space-between;
@@ -52,8 +57,9 @@
 
 @media screen and (min-width: $tablet-width) {
   .add-products__item {
-    padding: 27px 35px 28px;
-    justify-content: space-between;
+    padding: 24px 37px 28px;
+    flex-direction: row;
+    flex-wrap: wrap;
     line-height: 20px;
     border-top: 1px solid $border-color;
     border-left: 1px solid $border-color;
@@ -65,15 +71,17 @@
   }
 
   .add-products__title {
-    width: 30%;
-    margin-bottom: 23px;
+    margin-bottom: 26px;
+    display: inline-block;
     font-size: 20px;
     line-height: 20px;
+    vertical-align: middle;
   }
 
   .add-products__options {
-    width: 36%;
+    margin-left: auto;
     justify-content: flex-end;
+    align-items: center;
   }
 
   .add-products__price {
@@ -90,11 +98,12 @@
 
 @media screen and (min-width: $desktop-width) {
   .add-products {
-    width: 897px;
+    width: 895px;
   }
 
   .add-products__item {
     align-items: center;
+    justify-content: space-between;
     padding: 15px 0;
     border: none;
     border-top: 1px solid $border-color;
@@ -105,7 +114,7 @@
   }
 
   .add-products__title {
-    width: 32%;
+    width: 290px;
     margin: 0;
   }
 
