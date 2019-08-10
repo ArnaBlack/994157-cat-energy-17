@@ -50,13 +50,9 @@ gulp.task("images", function () {
   .pipe(gulp.dest("source/img"));
 });
 // обновляем html-файлы в папке build
-gulp.task("pasteHtml", function () {
+gulp.task("html", function () {
   return gulp.src("source/*.html")
     .pipe(gulp.dest("build"))
-});
-// удаляем  файлы html
-gulp.task("deleteHtml", function () {
-  return del("build/*.html");
 });
 // создаем webP
 gulp.task("webp", function () {
@@ -76,7 +72,7 @@ gulp.task("server", function () {
 //  отслеживаем обновления файлов
   gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"));
   gulp.watch("source/js/**/*.js", gulp.series("js"));
-  gulp.watch("source/*.html", gulp.series("deleteHtml", "pasteHtml", "refresh"));
+  gulp.watch("source/*.html", gulp.series( "html", "refresh"));
 });
 
 gulp.task("refresh", function (done) {
@@ -94,7 +90,8 @@ gulp.task("copy", function () {
   "source/fonts/**/*.{woff,woff2}",
   "source/img/**",
   "source/*.ico",
-  "source/js/libs/*.js"
+  "source/js/libs/*.js",
+  "source/*.html"
   ], {
   base: "source"
   })
@@ -105,8 +102,6 @@ gulp.task("copy", function () {
 gulp.task("build", gulp.series(
   "clean",
   "copy",
-  "deleteHtml",
-  "pasteHtml",
   "css",
   "js"
 ));
