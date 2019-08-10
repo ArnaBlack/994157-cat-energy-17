@@ -11,6 +11,9 @@ var rename = require("gulp-rename");
 var server = require("browser-sync").create();
 var imagemin = require("gulp-imagemin");
 var webp = require("gulp-webp");
+var uglify = require('gulp-uglify');
+var del = require("del");
+
 
 // сборка css
 gulp.task("css", function () {
@@ -26,8 +29,15 @@ gulp.task("css", function () {
     .pipe(csso())
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("source/css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
+});
+// минификация js
+gulp.task("js", function () {
+  return gulp.src("source/js/index.js")
+  .pipe(uglify())
+  .pipe(rename("index.min.js"))
+  .pipe(gulp.dest("build/js"))
 });
 // оптимизация изображений
 gulp.task("images", function () {
@@ -39,6 +49,15 @@ gulp.task("images", function () {
   ]))
   .pipe(gulp.dest("source/img"));
 });
+// обновляем html-файлы в папке build
+gulp.task("pasteHtml", function () {
+  return gulp.src("source/*.html")
+    .pipe(gulp.dest("build"))
+});
+// удаляем  файлы html
+gulp.task("deleteHtml", function () {
+  return del("build/*.html");
+});
 // создаем webP
 gulp.task("webp", function () {
   return gulp.src(["source/img/buckwheat-*.{png,jpg}", "source/img/fish-*.{png,jpg}", "source/img/chicken-*.{png,jpg}","source/img/rice-*.{png,jpg}", "source/img/index-can-*.{png,jpg}"])
@@ -48,7 +67,7 @@ gulp.task("webp", function () {
 // запуск сервера
 gulp.task("server", function () {
   server.init({
-    server: "source/",
+    server: "build/",
     notify: false,
     open: true,
     cors: true,
@@ -56,7 +75,39 @@ gulp.task("server", function () {
   });
 //  отслеживаем обновления файлов
   gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"));
-  gulp.watch("source/*.html").on("change", server.reload);
+  gulp.watch("source/js/**/*.js", gulp.series("js"));
+  gulp.watch("source/*.html", gulp.series("deleteHtml", "pasteHtml", "refresh"));
 });
 
-gulp.task("start", gulp.series("css", "server"));
+gulp.task("refresh", function (done) {
+  server.reload();
+  done();
+ });
+ // очищаем папку билд
+gulp.task("clean", function () {
+  return del("build");
+});
+
+// копируем файлы в папку билд
+gulp.task("copy", function () {
+  return gulp.src([
+  "source/fonts/**/*.{woff,woff2}",
+  "source/img/**",
+  "source/*.ico",
+  "source/js/libs/*.js"
+  ], {
+  base: "source"
+  })
+  .pipe(gulp.dest("build"));
+});
+
+
+gulp.task("build", gulp.series(
+  "clean",
+  "copy",
+  "deleteHtml",
+  "pasteHtml",
+  "css",
+  "js"
+));
+gulp.task("start", gulp.series("build", "server"));
