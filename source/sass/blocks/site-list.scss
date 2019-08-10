@@ -31,7 +31,7 @@
 
 @media screen and (min-width: $tablet-width) {
   .site-list {
-    width: 478px;
+    // width: 478px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -62,9 +62,9 @@
 }
 
 @media screen and (min-width: $desktop-width) {
-  .site-list {
-    width: 518px;
-  }
+  // .site-list {
+  //   width: 520px;
+  // }
 
   .site-list__link {
     font-size: 20px;
