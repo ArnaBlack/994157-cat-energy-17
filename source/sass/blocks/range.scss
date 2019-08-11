@@ -48,12 +48,13 @@
     border-bottom: 1px dotted #bebebe;
     outline: 0;
 
-    &:hover {
+    &:hover,
+    &:focus {
       border-bottom-style: solid;
     }
 
     &:active {
-      border-bottom: none;
+      border-bottom-color: transparent;
     }
   }
 
