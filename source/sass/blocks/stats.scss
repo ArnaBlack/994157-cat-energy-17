@@ -1,13 +1,13 @@
 @import "../vars.scss";
 
 .stats {
+  padding-top: 17px;
   padding-bottom: 26px;
   background-color: $light-bg;
 }
 
 .stats__title {
-  margin-top: 17px;
-  margin-bottom: 23px;
+  margin-bottom: 24px;
 }
 
 .stats__block--left {
@@ -80,6 +80,7 @@
 
 @media screen and (min-width: $tablet-width) {
   .stats {
+    padding-top: 44px;
     padding-bottom: 0;
     background-color: $white;
     border-top: 1px solid $border-color;
@@ -95,7 +96,6 @@
   }
 
   .stats__title {
-    margin-top: 44px;
     margin-bottom: 64px;
   }
 
@@ -131,7 +131,7 @@
 
   .stats__total {
     width: 174px;
-    padding: 13px 0;
+    padding: 10px 0;
     font-size: 20px;
     line-height: 26px;
     text-align: right;
@@ -221,7 +221,7 @@
 
   .stats__list {
     width: 366px;
-    margin-bottom: 30px;
+    margin-bottom: 33px;
   }
 
   .stats__desc {
