@@ -67,17 +67,17 @@
           <form class="selection__form form" action="https://echo.htmlacademy.ru" method="post">
             <fieldset class="form__field-group form__field-group--pet">
               <p class="form__input-block input-block">
-                <label class="input-block__label">Имя:<sup>*</sup></label>
-                <input class="input input-block__input" name="pet-name" type="text" placeholder="Барсик">
+                <label class="input-block__label" for="pet-name">Имя:<sup>*</sup></label>
+                <input class="input input-block__input" name="pet-name" id="pet-name" type="text" placeholder="Барсик">
               </p>
               <p class="form__input-block input-block">
-                <label class="input-block__label">вес (кг):<sup>*</sup>
+                <label class="input-block__label" for="pet-weight">вес (кг):<sup>*</sup>
                 </label>
-                <input class="input input-block__input" name="pet-weight" type="text" placeholder="7" pattern="[0-9]">
+                <input class="input input-block__input" name="pet-weight" id="pet-weight" type="text" placeholder="7" pattern="[0-9]">
               </p>
               <p class="form__input-block input-block">
-                <label class="input-block__label">возраст (лет):</label>
-                <input class="input input-block__input" name="pet-age" type="text" placeholder="7" pattern="[0-9]">
+                <label class="input-block__label" for="pet-age">возраст (лет):</label>
+                <input class="input input-block__input" name="pet-age" id="pet-age" type="text" placeholder="7" pattern="[0-9]">
               </p>
             </fieldset>
             <fieldset class="form__field-group options form__field-group--radio">
@@ -102,15 +102,15 @@
               </legend>
               <div class="form__input-wrap">
                 <p class="form__input-block input-block">
-                  <label class="input-block__label">E-mail:<sup>*</sup></label>
-                  <input class="input input-block__input input-block__input--email" name="master-name" type="email" placeholder="kuklachev@gmail.com">
+                  <label class="input-block__label" for="master-name">E-mail:<sup>*</sup></label>
+                  <input class="input input-block__input input-block__input--email" id="master-name" name="master-name" type="email" placeholder="kuklachev@gmail.com">
                   <svg class="input-block__icon input-block__icon--email" width="17" height="13" aria-hidden="true">
                     <use xlink:href="#icon-email"></use>
                   </svg>
                 </p>
                 <p class="form__input-block input-block">
-                  <label class="input-block__label">телефон:<sup>*</sup></label>
-                  <input class="input input-block__input input-block__input--phone" name="master-phone" type="tel" placeholder="8 (960) 900-60-90" pattern="8\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}">
+                  <label class="input-block__label" for="master-phone">телефон:<sup>*</sup></label>
+                  <input class="input input-block__input input-block__input--phone" id="master-phone" name="master-phone" type="tel" placeholder="8 (960) 900-60-90" pattern="8\([0-9]{3}\)[0-9]{3}-[0-9]{2}-[0-9]{2}">
                   <svg class="input-block__icon input-block__icon--phone" width="20" height="20" aria-hidden="true">
                     <use xlink:href="#icon-phone"></use>
                   </svg>
@@ -134,7 +134,7 @@
                     <label class="options__label" for="sweetener">Сахарозаменитель</label>
                   </li>
                   <li class="options__item options__item--checkbox">
-                    <input class="options__input options__input--checkbox visually-hidden" id="water" type="checkbox" name="water">
+                    <input class="options__input options__input--checkbox visually-hidden" id="water" type="checkbox" name="water" checked disabled>
                     <label class="options__label" for="water">Питьевая вода</label>
                   </li>
                   <li class="options__item options__item--checkbox">
@@ -173,7 +173,6 @@
               <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png, img/bg-map-tablet@2x.png 2x">
               <img class="contacts__map-img" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" width="320" height="400" alt="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
             </picture>
-            <span class="contacts__map-pin"></span>
           </div>
         </div>
       </section>
