@@ -15,6 +15,7 @@
   position: relative;
   display: inline-block;
   vertical-align: middle;
+  cursor: pointer;
 }
 
 .options__input + .options__label::before {
@@ -26,6 +27,7 @@
   left: 0;
   border: 1px solid #cdcdcd;
   transition: opacity 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
 }
 
 .options__input:hover + .options__label::before,
@@ -33,7 +35,8 @@
   border-color: #bababa;
 }
 
-.options__input:active + .options__label {
+.options__input:active + .options__label,
+.options__input:disabled + .options__label {
   opacity: 0.3;
 }
 
