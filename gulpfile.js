@@ -6,12 +6,12 @@ var sourcemap = require("gulp-sourcemaps");
 var sass = require("gulp-sass");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
-var csso = require('gulp-csso');
+var csso = require("gulp-csso");
 var rename = require("gulp-rename");
 var server = require("browser-sync").create();
 var imagemin = require("gulp-imagemin");
 var webp = require("gulp-webp");
-var uglify = require('gulp-uglify');
+var uglify = require("gulp-uglify");
 var del = require("del");
 
 
@@ -26,6 +26,7 @@ gulp.task("css", function () {
     .pipe(postcss([
       autoprefixer()
     ]))
+    .pipe(gulp.dest("build/css"))
     .pipe(csso())
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))

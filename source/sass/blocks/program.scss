@@ -16,7 +16,7 @@
   background-color: $light-bg;
 }
 
-.propram__icon {
+.program__icon {
   width: 50px;
   height: 50px;
   margin: 0;
@@ -26,16 +26,16 @@
   border-radius: 50%;
 }
 
-.propram__icon svg {
+.program__icon svg {
   position: absolute;
 }
 
-.propram__icon--slim svg {
+.program__icon--slim svg {
   top: -8%;
   left: 15%;
 }
 
-.propram__icon--pro svg {
+.program__icon--pro svg {
   top: 20%;
   left: -18%;
 }
@@ -137,7 +137,7 @@
     }
   }
 
-  .propram__icon {
+  .program__icon {
     width: 200px;
     height: 200px;
     margin: 0;
@@ -147,12 +147,12 @@
     transform: translateY(-50%);
   }
 
-  .propram__icon--slim svg {
+  .program__icon--slim svg {
     width: 140px;
     height: 194px;
   }
 
-  .propram__icon--pro svg {
+  .program__icon--pro svg {
     width: 268px;
     height: 112px;
   }
@@ -168,7 +168,7 @@
 @media screen and (min-width: $desktop-width) {
   .program {
     padding-top: 80px;
-    padding-bottom: 75px;
+    padding-bottom: 46px;
     margin: 0 auto;
   }
 
@@ -180,15 +180,15 @@
   .program__list {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   .program__item {
     width: 570px;
-    margin: 0;
     padding: 40px 50px 62px;
   }
 
-  .propram__icon {
+  .program__icon {
     width: 100px;
     height: 100px;
     position: relative;
@@ -197,12 +197,12 @@
     transform: none;
   }
 
-  .propram__icon--slim svg {
+  .program__icon--slim svg {
     width: 70px;
     height: 97px;
   }
 
-  .propram__icon--pro svg {
+  .program__icon--pro svg {
     width: 134px;
     height: 56px;
   }
